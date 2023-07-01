@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Laws of Motion</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>The 3 laws of motion</h2>
+    <p>Let's get started with Newton's laws of motion. There are 3 laws of motion with different formulas and definitions attached to them.</p>
+    <h3>Force</h3>
+    <p>The first unit we will need for Newton's laws of motion, but also for most subjects within physics, is the unit of force. This unit has the symbol N, which stands for Newton. Scientists love naming units after themselves.</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Force (F)</td>
+          <td>Newton</td>
+          <td>N</td>
+        </tr>
+      </table>
+      <p>This unit represents force, which is a hard unit to define. It is a vector, meaning it has a magnitude and a direction. Multiple forces can act upon one object, such as gravity. We can use vector mathematics to calculate a resulting vector (with a resulting magnitude and direction) from all the forces combined.</p>
+      <h3>Momentum</h3>
+      <p>As per definition, momentum is "the quantity of motion of a moving body". It is the unit for motion, and a vector like force. To calculate momentum we simply multiply mass and velocity. $$p=mv$$ Why this is the case can be hard to wrap your head around at first. Let's say two cars are moving at 30 km/h, but Car A weighs more than Car B. By definition, Car A has a higher momentum. But why? Well, eventhough both cars are going at the same speed, Car A has a higher quantity of motion, as it is moving a higher mass. This will become more clear once we get to Newton's second law of motion.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Mass (m)</td>
+          <td>Kilogram</td>
+          <td>kg</td>
+        </tr>
+        <tr>
+          <td>Velocity (v)</td>
+          <td>Meter per second</td>
+          <td>m/s</td>
+        </tr>
+        <tr>
+            <td>Momentum (p)</td>
+            <td>Kilogram-meter per second</td>
+            <td>(kg*m)/s</td>
+        </tr>
+      </table>
+      <h3>The first law</h3>
+      <p>Newton's first law of motion goes as follows:</p>
+      <q>Every body continues in its state of rest, or of uniform motion in a straight line, unless it is compelled to change that state by forces impressed upon it.</q>
+      <p>While this all sounds pretty bonkers and complicated, all it basically says is that if something is in state of rest (meaning it is not in motion), it will stay that way unless a force acts upon it. The same goes for an object in linear motion, which will remain in linear motion unless a force is acted upon it. Remember that even gravity is a force, so without gravity an object moving in one direction will keep doing this forever.</p>
+      <h3>The second law</h3>
+      <p>Newton's second law of motion goes as follows:</p>
+      <q>The change of motion of an object is proportional to the force impressed; and is made in the direction of the straight line in which the force is impressed.</q>
+      <p>This is a lot to unpack. First, Newton mentions that a change in motion (momentum) of an object is related to the force. If the motion or momentum of an object changes, we have a force acting upon the object. This is closely related to the first law, as an object's motion would not change unless there is a force, meaning there must be a force if the momentum has changed. The force of an object is thus the change in motion. In other words, the force is equal to the derivative of momentum. Since the mass of an object (in our assumption) is constant, this does not have to be taken into account for our derivative. This means we have a second formula.$$F=m\frac{dv}{dt}$$This also helps us understand the definition of momentum slightly better. If go back to those two cars going at the same speed with different masses, it's easy to imagine that stopping Car A (heavy) will require more force than Car B (lighter). To make the motion of Car A go to zero, we need more force, meaning a higher change in motion/momentum, thus meaning that Car A has more momentum than Car B.<br><br>The second part of this law states something about the direction. When we apply a force to an object, this means a change in motion. Since motion or momentum is a vector quantity, this means that the direction of the momentum of the object will also be affected by the rules of vector calculation. For example, if an object's motion faces north, applying an equal force to the west will result in a vector facing north-west. In short, if you apply force to an object, the change this will have on your motion vector is in the same direction as the direction of your force.</p>
+      <h3>The third law</h3>
+      <p>Newton's third law goes as follows:</p>
+      <q>To every action, there is always opposed an equal reaction; or, the mutual actions of two bodies upon each other are always equal, and directed to contrary parts.</q>
+      <p>You probably learned about action and reaction in school, but this can cause confusion for some people. What Newton is saying here is that every action has an equal reaction in the opposite direction. Let's prove this with an example. When you shoot a gun, you feel recoil, which is the gun moving backwards slightly.<br><br>If you shoot a gun, the gases in the barrel cause a force on the bullet. By this new third law of Newton, the bullet should then also apply an equal force on the gases in the barrel, but in the opposite direction. Why then does the bullet fly very fast, while your gun only recoils a slight bit? That's because of the mass of the gun and the bullet. Your gun weighs much more than a bullet. A force on both the bullet and the gases (or the gun) means a change in motion/momentum. As noted before, momentum is mass times velocity.<br><br>The motion of the bullet and the motion of the gun are equal, and since we know their masses, we can calculate the velocity that is caused by this change in motion (the force).<br><br>For example, if the bullet weighs 0.5 kg and the gun weighs 3 kg, and the motion change is 5 (kg*m)/s, we can calculate the velocity as follows:$$p=mv$$ $$v=\frac{p}{m}$$ $$v_{bullet}=\frac{3\frac{kgm}{h}}{0.5kg}$$ $$v_{bullet}=6\frac{m}{s}$$ $$v_{gun}=\frac{3\frac{kgm}{h}}{3kg}$$ $$v_{gun}=1\frac{m}{s}$$ So, by basic laws and mathematics, this can be easily proven.<br><br>Congratulations, you now have a great understanding of Newton's three laws of motion!</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion" target="_blank">Wikipedia: Newton's Laws of Motion</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Momentum" target="_blank">Wikipedia: Momentum</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>
