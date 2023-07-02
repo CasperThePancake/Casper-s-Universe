@@ -18,11 +18,11 @@ a {
 }
 
 h2 {
-    margin-left:10px;
+    margin-left:20px;
 }
 
 h3 {
-    margin-left:15px;
+    margin-left:25px;
 }
 
 table {
@@ -71,7 +71,7 @@ body {
 
 p, q {
     max-width:1200px;
-    margin-left:15px;
+    margin-left:25px;
 }
 
 h5 {
@@ -113,4 +113,16 @@ button {
     height: 8px;
     background: #767676;
     width: 0%;
+}
+
+img {
+    max-width:40%;
+    border:2px black groove;
+    margin-left:15px;
+}
+
+mjx-math {
+    padding:5px !important;
+    background-color:#d9d9d9;
+    border:1px black groove;
 }
