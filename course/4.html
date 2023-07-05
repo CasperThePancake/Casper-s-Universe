@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Work and energy</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Work and energy</h2>
+    <p>Work and energy are two new important units we'll be learning about in this course.</p>
+    <h3>Work</h3>
+    <p>If a force moves an object, we have work. Work is simply the product of that force (F) and the distance (Δx). The distance is also known here as the displacement (s) of an object. We thus have a new formula for work (W).$$W=Fs$$This new formula is not perfect yet, because there are actually two types of work in physics; positive and negative work. Positive work is work where the motion of the object (that causes displacement) is in the same direction as the force. Negative work is work where these two face the opposite direction. An example of positive work is you pushing a trolley, because your force is directioned in the same way as the movement of the trolley. An example of negative work is a car braking. When the car brakes, a braking force is applied, the direction of which faces the back of the car. But at this point, the car is still moving forward, so these directions are opposite and there is negative work.<br><br>For negative work, we simply make our formula negative.</p>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Unit</th>
+        <th>Symbol</th>
+      </tr>
+      <tr>
+        <td>Displacement (s)</td>
+        <td>Meters</td>
+        <td>m</td>
+      </tr>
+      <tr>
+        <td>Work (W)</td>
+        <td>Joules</td>
+        <td>J</td>
+      </tr>
+    </table>
+    <h3>Work - Different angles</h3>
+    <p>Additionally, it is possible that the direction of your force and your displacement is not exactly the same.</p>
+    <img src="assets/work_angle.png">
+    <p>In this image, the gray line shows the force vector, and the red line shows the displacement vector. They are not aligned in the same direction. I have also drawn blue lines to indicate the displacement vector's normal and tangent. The normal is what we want to use in our formula, so it'd be W=F*s(n). How do we replace this s(n) back to s? You may recognize a right triangle here, where the top-right part of the blue rectangle is our 90°. This means that the cosine of that 30° corner, let's call it theta (θ) goes like this:$$cos(θ)=\frac{s_{n}}{s}$$We can re-arrange the terms and get a new formula for work, taking the angle into account:$$W=F·s·cos(θ)$$As a test, let's say we do have a regular example where the angle between the force vector and the displacement vector is thus 0°. The cosine of 0 degrees is equal to 1, so we would indeed end up with our old formula.</p>
+    <h3>Energy</h3>
+    <p>You may have noticed that Work uses the same unit (J) as energy, which I assume you've seen before. That's because Work is equal to one form of energy, namely a change in kinetic energy. Kinetic energy is one of the many forms energy can come in. Energy is an important property of any object that lets it do work. <u>We will discuss different types of energy in the next course.</u> The work-energy theorem says the following.$$W=\Delta E_{k}$$Where the 'k' in subscript stands for 'kinetic'.</p>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Unit</th>
+        <th>Symbol</th>
+      </tr>
+      <tr>
+        <td>Energy (E)</td>
+        <td>Joules</td>
+        <td>J</td>
+      </tr>
+    </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Energy" target="_blank">Wikipedia: Energy</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Work_(physics)" target="_blank">Wikipedia: Work (physics)</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>

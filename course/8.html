@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Mass Flow</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Mass Flow</h2>
+    <h3>Equation of Continuity</h3>
+    <p>The equation of continuity says something about a fluid traveling through a pipe, where the density is constant and there is steady flow. First, we will define what flow rate (f) is.$$f=Av$$where A is the cross-sectional area the fluid goes through, and v is the velocity.</p>
+    <img src="assets/continuity_diagram.png">
+    <cite>From <a href="https://byjus.com/physics/derivation-of-continuity-equation/">Byju's</a></cite>
+    <p>As you can see, the cross-sectional area A1 is smaller than A2, we also have a speed v1 and v2. With this, we can define the volume that enters the pipe every second as A1*v1 - this is m² * (m/s), becoming m³/s.<br><br>Additionally, we can say that the mass of liquid entering each second is A1*v1*ρ1, this is also known as the mass flow rate (ṁ). Similarly, the mass of liquid exiting the pipe every second is A2*v2*ρ2.<br><br>Since we know that there is no liquid being lost, and there is a steady flow, that must mean the mass entering the pipe each second is the same as the mass exiting the pipe every second, so:$$A_{1}v_{1}ρ_{1}=A_{2}v_{2}ρ_{2}$$We know that the density stays the same for this liquid, so we can remove that on both sides and end up with our final formula:$$A_{1}v_{1}=A_{2}v_{2}$$which states that, when a liquid travels through a pipe with constant density, no loss of liquid, and steady flow, the volumetric flow rate will be constant.</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Mass flow rate (ṁ)</td>
+          <td>Kilograms per second</td>
+          <td>kg/s</td>
+        </tr>
+        <tr>
+            <td>Volumetric flow rate (f)</td>
+            <td>Cubic meters per second</td>
+            <td>m³/s</td>
+          </tr>
+      </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://www.toppr.com/ask/question/derive-equation-of-continuity/" target="_blank">Toppr: Derivation</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Mass_flow_rate" target="_blank">Wikipedia: Mass Flow Rate</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>

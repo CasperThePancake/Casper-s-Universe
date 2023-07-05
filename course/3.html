@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Work and energy</title>
+    <title>Law of Universal Gravity</title>
 </head>
 <body>
     <nav>
@@ -24,49 +24,43 @@
     </nav>
     <h1>Physicae</h1>
     <h5>by Casper</h5>
-    <h2>Work and energy</h2>
-    <p>Work and energy are two new important units we'll be learning about in this course.</p>
-    <h3>Work</h3>
-    <p>If a force moves an object, we have work. Work is simply the product of that force (F) and the distance (Δx). The distance is also known here as the displacement (s) of an object. We thus have a new formula for work (W).$$W=Fs$$This new formula is not perfect yet, because there are actually two types of work in physics; positive and negative work. Positive work is work where the motion of the object (that causes displacement) is in the same direction as the force. Negative work is work where these two face the opposite direction. An example of positive work is you pushing a trolley, because your force is directioned in the same way as the movement of the trolley. An example of negative work is a car braking. When the car brakes, a braking force is applied, the direction of which faces the back of the car. But at this point, the car is still moving forward, so these directions are opposite and there is negative work.<br><br>For negative work, we simply make our formula negative.</p>
+    <h2>The Law of Universal Gravity</h2>
+    <p>Let's get started with Newton's laws of motion. There are 3 laws of motion with different formulas and definitions attached to them.</p>
+    <h3>The basics</h3>
+    <p>Newton states that every object (that has a mass) is constantly applying a force on every other object in the universe. This sounds insane, but we don't really notice this because this force is proportional to the mass of each object, and inversely proportional to their distance. The bread in your closet is applying force on you, and you are also applying force on it, but this is so small that you will never notice it. What you can notice is that Earth is attracting you at all times, that's gravity.</p>
+    <h3>The formula</h3>
+    <p>We know (through experiments) that this new gravitational force is proportional to the product of the two objects' masses, and inversely proportional to the distance squared. To get a formula out of this we have to add a constant at the front. This will be G, the gravitational constant.$$F=G\frac{m_{1}m_{2}}{r^{2}}$$As you can tell from this formula, both objects will experience an equal force between them. This means that when the Earth applies force on us, we are also applying an equal force on Earth, sounds like Newton's third law of motion, right? But Earth is not moving because of us - it's moving because of its orbit around the sun. This is because the huge mass of Earth means that same force has a much smaller effect in acceleration. This is just like our example with the gun recoil and the bullet.</p>
     <table>
-      <tr>
-        <th>Name</th>
-        <th>Unit</th>
-        <th>Symbol</th>
-      </tr>
-      <tr>
-        <td>Displacement (s)</td>
-        <td>Meters</td>
-        <td>m</td>
-      </tr>
-      <tr>
-        <td>Work (W)</td>
-        <td>Joules</td>
-        <td>J</td>
-      </tr>
-    </table>
-    <h3>Work - Different angles</h3>
-    <p>Additionally, it is possible that the direction of your force and your displacement is not exactly the same.</p>
-    <img src="assets/work_angle.png">
-    <p>In this image, the gray line shows the force vector, and the red line shows the displacement vector. They are not aligned in the same direction. I have also drawn blue lines to indicate the displacement vector's normal and tangent. The normal is what we want to use in our formula, so it'd be W=F*s(n). How do we replace this s(n) back to s? You may recognize a right triangle here, where the top-right part of the blue rectangle is our 90°. This means that the cosine of that 30° corner, let's call it theta (θ) goes like this:$$cos(θ)=\frac{s_{n}}{s}$$We can re-arrange the terms and get a new formula for work, taking the angle into account:$$W=F·s·cos(θ)$$As a test, let's say we do have a regular example where the angle between the force vector and the displacement vector is thus 0°. The cosine of 0 degrees is equal to 1, so we would indeed end up with our old formula.</p>
-    <h3>Energy</h3>
-    <p>You may have noticed that Work uses the same unit (J) as energy, which I assume you've seen before. That's because Work is equal to one form of energy, namely a change in kinetic energy. Kinetic energy is one of the many forms energy can come in. Energy is an important property of any object that lets it do work. <u>We will discuss different types of energy in the next course.</u> The work-energy theorem says the following.$$W=\Delta E_{k}$$Where the 'k' in subscript stands for 'kinetic'.</p>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Gravitational constant (G)</td>
+          <td>Cubic meters per kilogram seconds squared</td>
+          <td>m³/(kg*s²)</td>
+        </tr>
+      </table>
+    <h3>Gravity on Earth</h3>
+    <p>In school you probably learned a different formula to calculate the gravitational force on Earth:$$F=gm$$But how do we get to this formula from Newton's foundation?<br><br>Let's say that m1 is Earth's mass and m2 is the mass of the object on Earth (i.e. a human). All the values besides m2 are constants, since we have G (gravitational constant), m1 (mass of Earth) and r (radius of Earth). If we calculate all these values like in Newton's formula we get the following result.$$g=\frac{m_{earth}·G}{r_{earth}^{2}}$$ $$g=\frac{5.972 · 10^{24} kg·6.674 · 10^{-11} \frac{m^{3}}{kg·s^{2}}}{(6,371,000m)^{2}}$$ $$g=9.81 \frac{m}{s^{2}}$$This means that, on Earth, an object's velocity will increase by 9.81 m/s every single second - m/s² (acceleration) is the derivative of velocity, and velocity is the derivative of position.</p>
     <table>
-      <tr>
-        <th>Name</th>
-        <th>Unit</th>
-        <th>Symbol</th>
-      </tr>
-      <tr>
-        <td>Energy (E)</td>
-        <td>Joules</td>
-        <td>J</td>
-      </tr>
-    </table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Gravity acceleration (g)</td>
+          <td>Meters per second squared</td>
+          <td>m/s²</td>
+        </tr>
+      </table>
+    <p>Since our formula is F=gm, this also means the unit of our constant g is N/kg. This lets you calculate the change in motion (force) for any object on Earth, if you know the mass.<br><br>Some of you might may be confused. Why does every object, regardless of its mass, accelerate 9.81 m/s every second? While acceleration due to Earth's gravitational force is equal for all objects, eventhough their masses differ, the force your object experiences will be greater for heavier objects, as per Newton's second law of motion (F=ma). This does <u>not</u> mean that that heavier force does cause your heavier object to fall faster. In a complete vacuum, without any other external forces, every object, heavy or light, will fall at the same rate. Even if they are experiencing a larger force, the large mass will balance out the F=ma formula and once again prove that the acceleration (a) will be equal. This might be hard to wrap your head around, because human intuition would say a brick falls faster than a feather, but this is only caused by the existence of air and air resistance.<br><br>Switching around the values in F=ma also teaches us that a=F/m, thus meaning that N/m is the same as m/s in this context, explaining why 9.81 m/s is also known as that 9.81 N/kg.<br><br>Congratulations, you now have a great understanding of Newton's law of universal gravitation!</p>
       <hr class="solid">
       <h2>Sources</h2>
-      <p><a href="https://en.wikipedia.org/wiki/Energy" target="_blank">Wikipedia: Energy</a></p>
-      <p><a href="https://en.wikipedia.org/wiki/Work_(physics)" target="_blank">Wikipedia: Work (physics)</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Gravitational_constant" target="_blank">Wikipedia: Gravitational Constant</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation" target="_blank">Wikipedia: Newton's law of universal gravitation</a></p>
       <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
     <!-- Scroll bar code -->
     <script>

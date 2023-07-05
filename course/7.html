@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Bernoulli Principle</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Bernoulli Principle</h2>
+    <h3>Conservation of Energy</h3>
+    <p>The Bernoulli Principle is basically a law for the conservation of energy in fluids (moving through pipes). This will be our biggest derivation so far, so strap in and get ready to pay attention to words on your screen!</p>
+    <h3>Derivation</h3>
+    <img src="assets/bernoulli_pipe.png">
+    <cite>From <a href="https://byjus.com/physics/bernoullis-principle/">Byju's</a></cite>
+    <p>We'll be referring to this figure a lot during the derivation. In this situation, we have an uphill pipe and a body of fluid at the bottom with a constant mass and density. We want it to go uphill, which will require an external force (F1), causing acceleration and doing positive work.<br><br>The height at the bottom is called y1, the distance we do work is dx1, and the cross-sectional area of the fluid is A1.<br><br>When the body of fluid is at the top, it still has that same mass and density. However, it now has a higher gravitational potential energy due to the larger height. This means that the kinetic energy has decreased, something that can only be caused by an external opposing force (F2) doing negative work at the top.<br><br>We will call the height at the top of the pipe y2, the distance of that work dx2 and the cross-sectional area there A2.<br><br>Let's start by looking at that work we are doing. At the bottom there is positive work, and there is negative work at the bottom, like so:$$W_{1}=F_{1}dx_{1}$$$$W_{2}=F_{2}dx_{2}$$We can replace F by p*A from Pascal's Law.$$W_{1}=p_{1}A_{1}dx_{1}$$$$W_{2}=p_{2}A_{2}dx_{2}$$An area times a distance becomes a volume, so we get a next step:$$W_{1}=p_{1}V_{1}$$$$W_{2}=p_{2}V_{2}$$Since the first one is positive and the second one is in the opposite direction, we can calculate the total work like so:$$W=p_{1}V_{1}-p_{2}V_{2}$$Since the mass and density are constant, the volume must also be constant between the two states, so we get this:$$W=(p_{1}-p_{2})V$$<br><br>Now we are going to look at the changes in energy. Bernoulli's Principle says something about kinetic energy and also potential energy of the fluid. First, let's define the change in kinetic energy like so:$$\Delta K=\frac{1}{2}mv^{2}_{2}-\frac{1}{2}mv^{2}_{1}$$Secondly, we can do the same for (gravitational) potential energy like this:$$\Delta U=mgy_{2}-mgy_{1}$$Finally, using the Work-Energy Theorem, the total work becomes this:$$W=\Delta K+\Delta U$$$$W=\frac{1}{2}mv^{2}_{2}-\frac{1}{2}mv^{2}_{1}+mgy_{2}-mgy_{1}$$We already found that work was equal to something else, so we can combine everything to get the following:$$(p_{1}-p_{2})V=\frac{1}{2}mv^{2}_{2}-\frac{1}{2}mv^{2}_{1}+mgy_{2}-mgy_{1}$$Let's re-arrange the terms to move everything with 1 in it to the left and everything with 2 to the right.$$p_{1}V+\frac{1}{2}mv_{1}^{2}+mgy_{1}=p_{2}V+\frac{1}{2}mv_{2}^{2}+mgy_{2}$$We're almost there, but let's try getting rid of that ugly V by dividing everything by it on both sides:$$p_{1}+\frac{\frac{1}{2}mv_{1}^{2}}{V}+\frac{mgy_{1}}{V}=p_{2}+\frac{\frac{1}{2}mv_{2}^{2}}{V}+\frac{mgy_{2}}{V}$$As we all know, mass divided by volume is equal to density, so our final formula becomes this:$$p_{1}+\frac{1}{2}ρv_{1}^{2}+ρgy_{1}=p_{2}+\frac{1}{2}ρv_{2}^{2}+ρgy_{2}$$And this is Bernoulli's Equation, showing the conservation of energy between two states of a fluid in a pipe.</p>
+    <h3>Airplane Lift</h3>
+    <p>How does an airplane stay airborne? It's simple, just look at this diagram of a wing.</p>
+    <img src="assets/airplane_lift.png">
+    <p>This is caused by lift force acting on the wing. How this is calculated is too complicated for now, but this is how it works. The air traveling over the curved surface must travel a longer distance in an equal time as the air below the wing, this causes the air above to be faster than the air below. From Bernoulli's Equation we can tell that a higher velocity would result in a lower pressure to make sure the conservation is true. The pressure below is greater than above, and that pressure difference causes lift, pushing the wings up and keeping the plane in the air.</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://www.youtube.com/watch?v=MxIP73frBZk" target="_blank">YouTube: Bernoulli's Equation</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Bernoulli%27s_principle" target="_blank">Wikipedia: Bernoulli's Principle</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>

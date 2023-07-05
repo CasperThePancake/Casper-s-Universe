@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Law of Universal Gravity</title>
+    <title>3 Equations of Motion</title>
 </head>
 <body>
     <nav>
@@ -24,43 +24,21 @@
     </nav>
     <h1>Physicae</h1>
     <h5>by Casper</h5>
-    <h2>The Law of Universal Gravity</h2>
-    <p>Let's get started with Newton's laws of motion. There are 3 laws of motion with different formulas and definitions attached to them.</p>
-    <h3>The basics</h3>
-    <p>Newton states that every object (that has a mass) is constantly applying a force on every other object in the universe. This sounds insane, but we don't really notice this because this force is proportional to the mass of each object, and inversely proportional to their distance. The bread in your closet is applying force on you, and you are also applying force on it, but this is so small that you will never notice it. What you can notice is that Earth is attracting you at all times, that's gravity.</p>
-    <h3>The formula</h3>
-    <p>We know (through experiments) that this new gravitational force is proportional to the product of the two objects' masses, and inversely proportional to the distance squared. To get a formula out of this we have to add a constant at the front. This will be G, the gravitational constant.$$F=G\frac{m_{1}m_{2}}{r^{2}}$$As you can tell from this formula, both objects will experience an equal force between them. This means that when the Earth applies force on us, we are also applying an equal force on Earth, sounds like Newton's third law of motion, right? But Earth is not moving because of us - it's moving because of its orbit around the sun. This is because the huge mass of Earth means that same force has a much smaller effect in acceleration. This is just like our example with the gun recoil and the bullet.</p>
-    <table>
-        <tr>
-          <th>Name</th>
-          <th>Unit</th>
-          <th>Symbol</th>
-        </tr>
-        <tr>
-          <td>Gravitational constant (G)</td>
-          <td>Cubic meters per kilogram seconds squared</td>
-          <td>m³/(kg*s²)</td>
-        </tr>
-      </table>
-    <h3>Gravity on Earth</h3>
-    <p>In school you probably learned a different formula to calculate the gravitational force on Earth:$$F=gm$$But how do we get to this formula from Newton's foundation?<br><br>Let's say that m1 is Earth's mass and m2 is the mass of the object on Earth (i.e. a human). All the values besides m2 are constants, since we have G (gravitational constant), m1 (mass of Earth) and r (radius of Earth). If we calculate all these values like in Newton's formula we get the following result.$$g=\frac{m_{earth}·G}{r_{earth}^{2}}$$ $$g=\frac{5.972 · 10^{24} kg·6.674 · 10^{-11} \frac{m^{3}}{kg·s^{2}}}{(6,371,000m)^{2}}$$ $$g=9.81 \frac{m}{s^{2}}$$This means that, on Earth, an object's velocity will increase by 9.81 m/s every single second - m/s² (acceleration) is the derivative of velocity, and velocity is the derivative of position.</p>
-    <table>
-        <tr>
-          <th>Name</th>
-          <th>Unit</th>
-          <th>Symbol</th>
-        </tr>
-        <tr>
-          <td>Gravity acceleration (g)</td>
-          <td>Meters per second squared</td>
-          <td>m/s²</td>
-        </tr>
-      </table>
-    <p>Since our formula is F=gm, this also means the unit of our constant g is N/kg. This lets you calculate the change in motion (force) for any object on Earth, if you know the mass.<br><br>Some of you might may be confused. Why does every object, regardless of its mass, accelerate 9.81 m/s every second? While acceleration due to Earth's gravitational force is equal for all objects, eventhough their masses differ, the force your object experiences will be greater for heavier objects, as per Newton's second law of motion (F=ma). This does <u>not</u> mean that that heavier force does cause your heavier object to fall faster. In a complete vacuum, without any other external forces, every object, heavy or light, will fall at the same rate. Even if they are experiencing a larger force, the large mass will balance out the F=ma formula and once again prove that the acceleration (a) will be equal. This might be hard to wrap your head around, because human intuition would say a brick falls faster than a feather, but this is only caused by the existence of air and air resistance.<br><br>Switching around the values in F=ma also teaches us that a=F/m, thus meaning that N/m is the same as m/s in this context, explaining why 9.81 m/s is also known as that 9.81 N/kg.<br><br>Congratulations, you now have a great understanding of Newton's law of universal gravitation!</p>
+    <h2>The Three Equations of Motion</h2>
+    <p>We already learned about Newton's 3 Laws of Motion, but there are 3 more equations that each build on the previous one, which we'll learn now.</p>
+    <h3>Definitions</h3>
+    <p>We'll be using acceleration a lot here. Acceleration is the derivative of velocity, meaning it is a change in velocity. We'll also be using the symbol 'u', which stands for the initial velocity of our object. This is the velocity the object had before the acceleration (or the force) was applied. In most cases, this will be 0, if the object accelerates from a position of rest.</p>
+    <h3>The first equation</h3>
+    <p>The first equation is quite simple, here it is:$$v=u+at$$Where v is the velocity at the time t, and a is acceleration. Remember that we're still playing with physics in a forceless arena with no external forces, the acceleration does not decrease! Understanding this formula should be fairly easy. To calculate our current velocity, we take the initial velocity, and calculate how much we have gained (or lost, if acceleration is negative) by multiplying acceleration by time.</p>
+    <h3>The second equation</h3>
+    <p>Before I derive this awesome new formula, I'll just throw it at you.$$s=ut+\frac{1}{2}at^{2}$$You should know every symbol here, except s. This symbol, standing for 'displacement', will return in the next course, but it basically stands for the distance that an object has traveled. Because of this, we get the logical conclusion:$$v=\frac{s}{t}$$ $$s=v⋅t$$This is fine, but since we have acceleration, our velocity is <u>not constant</u>, so we'll need to take the average - this is a rule in kinematics. That means the following:$$s=\frac{u+v}{2}⋅t$$From the first equation in this course, we know that v=u+at, so let's replace v by that in our current formula and get this:$$s=\frac{u+(u+at)}{2}⋅t$$We simplify...$$s=\frac{2u+at}{2}⋅t$$ $$s=ut+\frac{1}{2}at^{2}$$And proven it has been! This new equation shows the relation between initial velocity, acceleration, time, and displacement.</p>
+    <h3>The third equation</h3>
+    <p>I'm once again spitting this formula in your face first.$$v^{2}-u^{2}=2as$$Let's go back to the formula for displacement with average velocity:$$s=\frac{u+v}{2}⋅t$$Now we can once again go to the first equation we have and convert it to this:$$v=u+at$$ $$t=\frac{v-u}{a}$$Then we replace t in our previous formula with this calculation:$$s=\frac{u+v}{2}⋅t$$ $$s=(\frac{u+v}{2})⋅(\frac{v-u}{a})$$After that we just simplify!$$s=\frac{v^{2}-u^{2}}{2a}$$ $$v^{2}-u^{2}=2as$$Another awesome equation derived! This one shows the relation between initial velocity, velocity, acceleration and displacement. The difference with the previous one (second equation) is that this one does not contain t, while the previous one did not contain v. Two different relations, two different equations!</p>
       <hr class="solid">
       <h2>Sources</h2>
-      <p><a href="https://en.wikipedia.org/wiki/Gravitational_constant" target="_blank">Wikipedia: Gravitational Constant</a></p>
-      <p><a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation" target="_blank">Wikipedia: Newton's law of universal gravitation</a></p>
+      <p><a href="https://byjus.com/physics/derivation-of-equation-of-motion/" target="_blank">Byjus</a></p>
+      <p><a href="https://www.teachoo.com/10128/3044/Second-Equation-of-Motion/category/Concepts/" target="_blank">Teachoo: Second Equation of Motion</a></p>
+      <p><a href="https://www.teachoo.com/10129/3044/Third-Equation-of-Motion/category/Concepts/" target="_blank">Teachoo: Third Equation of Motion</a></p>
       <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
     <!-- Scroll bar code -->
     <script>
