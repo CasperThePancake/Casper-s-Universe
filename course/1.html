@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>The 3 laws of motion</h2>
+    <h3 id="wordCount">COUNT</h3>
     <p>Let's get started with Newton's laws of motion. There are 3 laws of motion with different formulas and definitions attached to them.</p>
     <h3>Force</h3>
     <p>The first unit we will need for Newton's laws of motion, but also for most subjects within physics, is the unit of force. This unit has the symbol N, which stands for Newton. Scientists love naming units after themselves.</p>
@@ -105,6 +106,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

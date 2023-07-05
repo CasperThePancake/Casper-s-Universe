@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Gas Laws</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Gas Laws</h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Introduction</h3>
+    <p>The three gas laws are laws showing the relation between properties of gases. These include pressure, temperature and volume. These laws are not derived like the previous formulas we saw, but rather by analyzing how one property changes if we change another - through experimentation.</p>
+    <h3>Boyle's Law</h3>
+    <p>Boyle's law says something about the relation between pressure and volume, while temperature remains constant. Let's say we have a container with some nice air in it, and we shrink the container using some force. Will the pressure in the container increase or decrease? Logically, making the container smaller with the same temperature and the same amount of air in it will increase the pressure. So, volume and pressure are inversely proportional.<br><br>This means that for any gas with constant temperature and amount, the following is true between two states:$$p_{1}V_{1}=p_{2}V_{2}$$</p>
+    <h3>Charles's Law</h3>
+    <p>Next up is Charles's Law, which says something about the relation between volume and temperature. This is probably the most well known relation. Everyone knows that heating an object up makes it expand, and cooling it down makes it shrink. Thus, volume and temperature are proportional.<br><br>This means that for any gas with a constant pressure and amount, the following is true between two states:$$\frac{V_{1}}{T_{1}}=\frac{V_{2}}{T_{2}}$$</p>
+    <h3>Gay-Lussac's Law</h3>
+    <p>Only one relation remains, the one between pressure and temperature. As we know from science class, temperature is a measurement for how fast particles travel around via Brownian Movement. Logically then, if the temperature increases, the particles move faster and the pressure also increases.<br><br>This means that for any gas with a constant volume and amount, the following is true between two states:$$\frac{p_{1}}{T_{1}}=\frac{p_{2}}{T_{2}}$$</p>
+    <h3>Combined Gas Law</h3>
+    <p>We can also combine all of these into one big law. Both pressure and volume are proportional to temperature, while pressure and volume are inversely proportional.<br><br>This means that for any gas with a constant amount, the following is true between two states:$$\frac{V_{1}p_{1}}{T_{1}}=\frac{V_{2}p_{2}}{T_{2}}$$</p>
+    <h3>The Ideal Gas</h3>
+    <p>The ideal gas theorem is a simplified formula for a gas with a lot of particles that shows off the relation between pressure, volume, amount, and temperature. We will derive this formula from the perspective of volume.<br><br>Volume is proportional to the amount of gas (in mol); if there is more gas, the volume increases (while all other properties remain constant)<br><br>Volume is proportional to temperature; the higher the temperature, the bigger the volume (while all other properties remain constant)<br><br>Volume is inversely proportional to pressure; the bigger the volume, the lower the pressure (while all other properties remain constant)<br><br>Combining these via basic rules of physics gives us this:$$V=c⋅\frac{nT}{p}$$The c you see here is a constant that must be added when deriving formulas in this way. We will call this constant R, the ideal gas constant.$$pV=nRT$$</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Ideal gas constant</td>
+          <td>R</td>
+          <td>8.314 (m³⋅Pa)/(K⋅mol)</td>
+        </tr>
+      </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Gas_laws" target="_blank">Wikipedia: Gas Laws</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

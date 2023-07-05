@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>Mass Flow</h2>
+    <h3 id="wordCount">COUNT</h3>
     <h3>Equation of Continuity</h3>
     <p>The equation of continuity says something about a fluid traveling through a pipe, where the density is constant and there is steady flow. First, we will define what flow rate (f) is.$$f=Av$$where A is the cross-sectional area the fluid goes through, and v is the velocity.</p>
     <img src="assets/continuity_diagram.png">
@@ -62,6 +63,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

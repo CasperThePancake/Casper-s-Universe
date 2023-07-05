@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>The Law of Universal Gravity</h2>
+    <h3 id="wordCount">COUNT</h3>
     <p>Let's get started with Newton's laws of motion. There are 3 laws of motion with different formulas and definitions attached to them.</p>
     <h3>The basics</h3>
     <p>Newton states that every object (that has a mass) is constantly applying a force on every other object in the universe. This sounds insane, but we don't really notice this because this force is proportional to the mass of each object, and inversely proportional to their distance. The bread in your closet is applying force on you, and you are also applying force on it, but this is so small that you will never notice it. What you can notice is that Earth is attracting you at all times, that's gravity.</p>
@@ -33,13 +34,13 @@
     <table>
         <tr>
           <th>Name</th>
-          <th>Unit</th>
           <th>Symbol</th>
+          <th>Value</th>
         </tr>
         <tr>
-          <td>Gravitational constant (G)</td>
-          <td>Cubic meters per kilogram seconds squared</td>
-          <td>m³/(kg*s²)</td>
+          <td>Gravitational constant</td>
+          <td>G</td>
+          <td>6.67*10^-11 (N*m²)/kg²</td>
         </tr>
       </table>
     <h3>Gravity on Earth</h3>
@@ -56,7 +57,7 @@
           <td>m/s²</td>
         </tr>
       </table>
-    <p>Since our formula is F=gm, this also means the unit of our constant g is N/kg. This lets you calculate the change in motion (force) for any object on Earth, if you know the mass.<br><br>Some of you might may be confused. Why does every object, regardless of its mass, accelerate 9.81 m/s every second? While acceleration due to Earth's gravitational force is equal for all objects, eventhough their masses differ, the force your object experiences will be greater for heavier objects, as per Newton's second law of motion (F=ma). This does <u>not</u> mean that that heavier force does cause your heavier object to fall faster. In a complete vacuum, without any other external forces, every object, heavy or light, will fall at the same rate. Even if they are experiencing a larger force, the large mass will balance out the F=ma formula and once again prove that the acceleration (a) will be equal. This might be hard to wrap your head around, because human intuition would say a brick falls faster than a feather, but this is only caused by the existence of air and air resistance.<br><br>Switching around the values in F=ma also teaches us that a=F/m, thus meaning that N/m is the same as m/s in this context, explaining why 9.81 m/s is also known as that 9.81 N/kg.<br><br>Congratulations, you now have a great understanding of Newton's law of universal gravitation!</p>
+    <p>Since our formula is F=gm, this also means the unit of our constant g is N/kg. This lets you calculate the change in motion (force) for any object on Earth, if you know the mass.<br><br>As a sidenote I also want to mention that mass and weigh are not the same thing. Mass is the amount of mass an object has, a property of that object. Weight is the force the object feels due to gravity, as calculated with F=mg.<br><br>Some of you might may be confused. Why does every object, regardless of its mass, accelerate 9.81 m/s every second? While acceleration due to Earth's gravitational force is equal for all objects, eventhough their masses differ, the force your object experiences will be greater for heavier objects, as per Newton's second law of motion (F=ma). This does <u>not</u> mean that that heavier force does cause your heavier object to fall faster. In a complete vacuum, without any other external forces, every object, heavy or light, will fall at the same rate. Even if they are experiencing a larger force, the large mass will balance out the F=ma formula and once again prove that the acceleration (a) will be equal. This might be hard to wrap your head around, because human intuition would say a brick falls faster than a feather, but this is only caused by the existence of air and air resistance.<br><br>Switching around the values in F=ma also teaches us that a=F/m, thus meaning that N/m is the same as m/s in this context, explaining why 9.81 m/s is also known as that 9.81 N/kg.<br><br>Congratulations, you now have a great understanding of Newton's law of universal gravitation!</p>
       <hr class="solid">
       <h2>Sources</h2>
       <p><a href="https://en.wikipedia.org/wiki/Gravitational_constant" target="_blank">Wikipedia: Gravitational Constant</a></p>
@@ -72,6 +73,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

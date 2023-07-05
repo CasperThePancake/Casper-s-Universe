@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Pressure in Solids</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Pressure in Solids</h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3><u>Stress</u></h3>
+    <p>Believe it or not, solid objects can also feel pressure. We call this 'stress', it is calculated in the same way as pressure.$$σ=\frac{F}{A}$$</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Stress (σ)</td>
+          <td>Pascal</td>
+          <td>Pa</td>
+        </tr>
+      </table>
+      <h3><u>Types of stress</u></h3>
+      <p>If we're not talking about mental stress, there are 4 main types we can discuss. I will also explain each type with the same example.</p>
+      <h3>Tension Stress</h3>
+      <p>Tension will be discussed in this course as well, but tension stress is basically when you stretch or pull an object by its ends. Let's say we have a soft cube to play with. Tension stress would be pulling on two sides of the cube to stretch it out and maybe rip it apart.</p>
+      <h3>Compression Stress</h3>
+      <p>Compression stress is when you push or compress an object by its ends. Let's say we have a soft cube to play with. Compression stress would be squeezing this soft cube.</p>
+      <h3>Shear Stress</h3>
+      <p>Shear stress is the most difficult type to comprehend. It is basically when you apply a force parallel to the cross-sectional area of an object. Let's say we have a soft cube to play with. Shear stress would be taking your fist and pushing into a side of the cube as hard as you can, this deforms the cube and causes its layers to slide relative to eachother.</p>
+      <h3>Bending Stress</h3>
+      <p>Bending stress is another logical type of stress. It is when you apply a force perpendicular to the surface of an object, causing it to bend or deform. The outside of the bend will be stretched, while the inside of the bend is compressed. The stress will be the greatest at the outermost part of the object. A great example of this is folding paper, because the outer edges are being stretched, while the paper at the bend is being compressed. The most stress is applied to the edges of your paper.</p>
+      <h3><u>Tension</u></h3>
+      <p>Tension, by definition, is a force from an object under stress that is trying to restore equilibrium. If you are pulling on a rubber band, the rubber band will be under stress and a tension force will be applied to it. As soon as you stop applying force, the tension force will take over and force the rubber band back to its original non-deformed state.<br><br>Calculating this tension force is difficult, because it gets more complex as objects get more complex. In the case of a single string which has no bends, the tension force will be equal to the combined forces acting on the ends of the string, following Newton's third law. In a regular scenario this could be the sum of your pulling force and the force of gravity.</p>
+      <h3><u>Strain</u></h3>
+      <p>Strain is a measure of deformation an object experiences when it is under stress or tension. We can calculate the strain in different ways. For one-dimensional stretching or compressing, referred to as linear strain, we can calculate strain using this formula:$$ε=\frac{\Delta x}{x_{0}}$$So we divide the added or removed (if there is compression stress) length by the initial length of the object.<br><br>For three-dimensional stretching or compressing, referred to as volumetric strain, we can do the same with volume, getting this formula:$$ε=\frac{\Delta V}{V_{0}}$$Both of these can also be expressed as percentages by multiplying by 100. This is not a unit, since dividing meter by meter gives us no unit.</p>
+      <h3><u>Elasticity</u></h3>
+      <p>Elasticity is the ability for an object to return to its non-deformed, initial shape after being under stress. We can calculate the stress applied to an object with this new formula:$$σ=Eε$$Here, σ stands for the stress, ε is strain, and E is the modulus of elasticity, also known as Young's modulus. The value of Young's modulus depends on the material of your object, but it is always measured in Pascal (or N/m²).</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Young's Modulus (E)</td>
+          <td>Pascal</td>
+          <td>Pa</td>
+        </tr>
+      </table>
+      <h3><u>Bulk Modulus</u></h3>
+      <p>The bulk modulus tells us about the relation between pressure acting on an object and its change in volume due to compression (the volumetric strain). Since compression causes a decrease in volume, we get this formula to calculate the bulk modulus of an object:$$K=-\frac{p}{ε}$$where K is bulk modulus, p is pressure, and ε is volumetric strain. This also allows us to calculate the volumetric strain on an object if we know its bulk modulus, the initial volume, and how much pressure is applied, like so:$$\Delta V=-\frac{Vp}{K}$$</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Bulk Modulus (K)</td>
+          <td>Pascal</td>
+          <td>Pa</td>
+        </tr>
+      </table>
+      <h3><u>Shear Strain and Shear Modulus</u></h3>
+      <p>How do we calculate shear strain? It's not as straightforward as the other types of strain, like volumetric strain. I'll explain this using the following diagram.</p>
+      <img src="assets/shear_strain.png">
+      <cite>From <a href="https://www.quora.com/What-is-shear-strain">Quora</a></cite>
+      <p>Shear strain will be displayed with the symbol γ. It is equal to the displacement or deformation of the object due to shear tension (Δx) divided by the height of the object (h). In this case the blue part is the deformation, and the red part is the height.$$γ=\frac{Δx}{h}$$Another way to approach this, like on the diagram, is by saying that γ is the tangent of the angle formed by that deformation.<br><br>Shear strain, like all types of strain, has no unit, since we are dividing two of the same units.<br><br>With that we can define a relation between the deformation (the shear strain) and shear stress. This is like using the bulk modulus, because we will be using the shear modulus for this.$$G=\frac{τ}{γ}$$Where G is the shear modulus, τ is shear stress, and γ is the shear strain.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Shear Modulus (G)</td>
+          <td>Pascal</td>
+          <td>Pa</td>
+        </tr>
+        <tr>
+            <td>Shear Stress (τ)</td>
+            <td>Pascal</td>
+            <td>Pa</td>
+          </tr>
+      </table>
+      <p>If we know an object's height, shear modulus, and shear stress (the pressure on it), we can calculate the deformation in meters like so:$$\Delta x=\frac{hτ}{G}$$where Δx is the deformation, h is the height of the object, G is the shear modulus, and τ is the shear stress or the pressure acting on the object.<br><br>Congratulations, you now have a great understanding of pressure, stress, tension, and strain on solid objects!</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Deformation_(physics)" target="_blank">Wikipedia: Strain</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Tension_(physics)" target="_blank">Wikipedia: Tension</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Stress_(mechanics)" target="_blank">Wikipedia: Stress</a></p>
+      <p><a href="https://byjusexamprep.com/volumetric-strain-i#:~:text=What%20is%20the%20volumetric%20strain,EV%3DΔV%2FV." target="_blank">Byju's</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Elasticity_(physics)" target="_blank">Wikipedia: Elasticity</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Elastic_modulus" target="_blank">Wikipedia: Elastic Modulus</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Deformation_(physics)" target="_blank">Wikipedia: Deformation</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Shear_modulus" target="_blank">Wikipedia: Shear Modulus</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

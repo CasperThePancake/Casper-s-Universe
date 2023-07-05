@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>Work and energy</h2>
+    <h3 id="wordCount">COUNT</h3>
     <p>Work and energy are two new important units we'll be learning about in this course.</p>
     <h3>Work</h3>
     <p>If a force moves an object, we have work. Work is simply the product of that force (F) and the distance (Δx). The distance is also known here as the displacement (s) of an object. We thus have a new formula for work (W).$$W=Fs$$This new formula is not perfect yet, because there are actually two types of work in physics; positive and negative work. Positive work is work where the motion of the object (that causes displacement) is in the same direction as the force. Negative work is work where these two face the opposite direction. An example of positive work is you pushing a trolley, because your force is directioned in the same way as the movement of the trolley. An example of negative work is a car braking. When the car brakes, a braking force is applied, the direction of which faces the back of the car. But at this point, the car is still moving forward, so these directions are opposite and there is negative work.<br><br>For negative work, we simply make our formula negative.</p>
@@ -78,6 +79,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

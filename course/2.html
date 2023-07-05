@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>The Three Equations of Motion</h2>
+    <h3 id="wordCount">COUNT</h3>
     <p>We already learned about Newton's 3 Laws of Motion, but there are 3 more equations that each build on the previous one, which we'll learn now.</p>
     <h3>Definitions</h3>
     <p>We'll be using acceleration a lot here. Acceleration is the derivative of velocity, meaning it is a change in velocity. We'll also be using the symbol 'u', which stands for the initial velocity of our object. This is the velocity the object had before the acceleration (or the force) was applied. In most cases, this will be 0, if the object accelerates from a position of rest.</p>
@@ -50,6 +51,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

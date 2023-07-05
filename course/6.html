@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>Pressure</h2>
+    <h3 id="wordCount">COUNT</h3>
     <h3>Definition</h3>
     <p>By definition, pressure is the amount of force you apply on a surface. The formula is simple:$$p=\frac{F}{A}$$The unit here is N/m², otherwise known as Pascal (Pa), 1 Pa = 1 N/m².</p>
     <table>
@@ -86,6 +87,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>Bernoulli Principle</h2>
+    <h3 id="wordCount">COUNT</h3>
     <h3>Conservation of Energy</h3>
     <p>The Bernoulli Principle is basically a law for the conservation of energy in fluids (moving through pipes). This will be our biggest derivation so far, so strap in and get ready to pay attention to words on your screen!</p>
     <h3>Derivation</h3>
@@ -34,7 +35,7 @@
     <h3>Airplane Lift</h3>
     <p>How does an airplane stay airborne? It's simple, just look at this diagram of a wing.</p>
     <img src="assets/airplane_lift.png">
-    <p>This is caused by lift force acting on the wing. How this is calculated is too complicated for now, but this is how it works. The air traveling over the curved surface must travel a longer distance in an equal time as the air below the wing, this causes the air above to be faster than the air below. From Bernoulli's Equation we can tell that a higher velocity would result in a lower pressure to make sure the conservation is true. The pressure below is greater than above, and that pressure difference causes lift, pushing the wings up and keeping the plane in the air.</p>
+    <p>This is caused by lift force acting on the wing. How this is calculated is too complicated for now, but this is how it works. The air (which is considered a fluid, by the way) traveling over the curved surface must travel a longer distance in an equal time as the air below the wing, this causes the air above to be faster than the air below. From Bernoulli's Equation we can tell that a higher velocity would result in a lower pressure to make sure the conservation is true. The pressure below is greater than above, and that pressure difference causes lift, pushing the wings up and keeping the plane in the air.</p>
       <hr class="solid">
       <h2>Sources</h2>
       <p><a href="https://www.youtube.com/watch?v=MxIP73frBZk" target="_blank">YouTube: Bernoulli's Equation</a></p>
@@ -50,6 +51,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>

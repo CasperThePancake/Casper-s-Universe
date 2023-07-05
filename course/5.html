@@ -25,6 +25,7 @@
     <h1>Physicae</h1>
     <h5>by Casper</h5>
     <h2>Forms of Energy</h2>
+    <h3 id="wordCount">COUNT</h3>
     <p>Energy comes in many forms, so we'll talk about and derive formulas for a few of them here. At the end I will also list up other forms of energy we might discuss in future courses (eg. electricity).</p>
     <h3><u>Chemical Energy</u></h3>
     <p>We won't go too deep into this form. It is basically energy released by chemical reactions. When you use a muscle, energy in your body (in the form of ATP) is used up, releasing chemical energy.</p>
@@ -91,6 +92,16 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("bar").style.width = scrolled + "%";
         }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
     </script>
 </body>
 </html>
