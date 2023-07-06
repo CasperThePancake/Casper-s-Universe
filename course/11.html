@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Heat Capacity</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Heat Capacity</h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Heat Energy</h3>
+    <p>Heat as we know it is a form of energy transferred between objects with a different temperature, until they reach an equilibrium. But just how much of that energy is needed to heat an object up by 1 degree? That's where heat capacity comes in!</p>
+    <h3>Specific Heat Capacity</h3>
+    <p>First is specific heat capacity with symbol C, defined as how many joules of heat energy is necessary to warm 1 kilogram of something up by 1 Kelvin. To go from C° to Kelvin, simply add 273, and vice versa. This is because the absolute zero cold is measured at -273°C, objects cannot get colder than that. This is measured in Kelvin as 0K.</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Temperature (T)</td>
+          <td>Kelvin</td>
+          <td>K</td>
+        </tr>
+        <tr>
+            <td>Temperature (θ)</td>
+            <td>Degrees celcius</td>
+            <td>°C</td>
+          </tr>
+          <tr>
+            <td>Heat Energy (Q)</td>
+            <td>Joules</td>
+            <td>J</td>
+          </tr>
+      </table>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Specific Heat Capacity</td>
+          <td>C</td>
+          <td>Material-specific (J/(kg*K))</td>
+        </tr>
+      </table>
+      <p>This means the following formula is used to calculate the amount of energy required to heat an object with specific mass up or down by a specific amount of Kelvin. Keep in mind that cooling things down will result in a negative heat energy, which means heat energy is emitted from the object.$$Q=mC\Delta T$$</p>
+      <h3>Molar Heat Capacity</h3>
+      <p>In chemistry you probably learned about moles. Every element in the periodic table has a molar mass, which means how much one mole of that element would weigh (M). If you know the amount of moles (n) you've got, you can add up all of the molar masses of your substance (eg. H2O would be 1+1+16=18 g/mol) and multiply it by the amount of moles to get a mass (m) in grams. One mole is equal to about 6.022*10^23 particles. With that quick recap, we can define molar heat capacity with symbol Cm as the heat energy required to warm one mole of a substance up by one Kelvin.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Molar mass (M)</td>
+          <td>grams per mole</td>
+          <td>g/mol</td>
+        </tr>
+        <tr>
+            <td>Amount of substance (n)</td>
+            <td>Moles</td>
+            <td>mol</td>
+          </tr>
+      </table>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Molar Heat Capacity</td>
+          <td>Cm</td>
+          <td>Material-specific (J/(mol*K))</td>
+        </tr>
+      </table>
+      <p>We once again get a similar formula:$$Q=nC_{m}\Delta T$$</p>
+      <h3>Power</h3>
+      <p>Now that we're talking about energy, I might as well introduce you to power. This unit measures how much work or energy is transferred per unit of time. The symbol is P and this is the formula:$$P=\frac{E}{\Delta t}$$$$P=\frac{W}{\Delta t}$$</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Power (P)</td>
+          <td>Watts</td>
+          <td>W</td>
+        </tr>
+      </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Heat_capacity" target="_blank">Wikipedia: Heat Capacity</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Amount_of_substance" target="_blank">Wikipedia: Amount of substance</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Molar_mass" target="_blank">Wikipedia: Molar mass</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Fluids</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2>Fluids</h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Fluids</h3>
+    <p>We already covered most of the theory surrounding fluids, such as the Bernoulli Principle, gas laws, pressure, and mass flow. In this course we'll cover the remaining subjects!</p>
+    <h3>Streamline</h3>
+    <p>In fluid mechanics, a streamline is the line traveled by one water molecule in a fluid. This helps us understand where the water is heading and how it is moving. The velocity at any given point on the streamline can be found by calculating the slope of its tangent line.</p>
+    <h3>Types of Flow</h3>
+    <p>There are 2 main types of flow we can discuss in fluids. They are easy to tell apart!<br><br>First is laminar flow, in which the fluid's flow can be broken up into layers, also called laminae. There is little to no disruption or mixing between these layers. This type of flow is generally paired with a slower velocity of the fluid, like in water from a tap.<br><br>Meanwhile, turbulent flow is the exact opposite. The layers mix and merge together, creating almost random and unpredictable motion of the water molecules. This type of flow is generally paired with a larger velocity of the fluid, like in a fast river.</p>
+    <h3>Viscosity</h3>
+    <p>Viscosity is a very simple property of a fluid to understand, it's how thick it is. We all know honey or syrup is much more viscous than water because it flows slower. The calculation of viscosity, however, is much more complex.</p>
+    <img src="assets/viscosity.gif">
+    <cite>From <a href="https://www.grc.nasa.gov/www/BGH/viscosity.html">NASA</a></cite>
+    <p>In this situation, there is a fluid flowing over a surface at the bottom. If we were to cut the fluid into different layers of height, we'd see that the top layers are moving much faster than the ones at the bottom, as caused by friction between the surface and the bottom layers of the fluid. The higher layers can move more freely. This difference in velocity between the layers creates shear stress, kinda like sliding two metal plates over eachother at different speeds. This is especially visible near the bottom, where the change in velocity is very large, causing very large shear stress.<br><br>We can clearly see that the change in velocity (dv/dy, with respect to distance from the bottom)is proportional to the shear stress (τ). This is because, where the velocity gradient becomes smaller, the shear stress also becomes smaller. The constant of proportionality we add into this will be called μ, which stands for the (dynamic) viscosity of the fluid.$$τ=μ\frac{du}{dy}$$</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Dynamic Viscosity</td>
+          <td>μ</td>
+          <td>Fluid-specific (Pa*s)</td>
+        </tr>
+      </table>
+      <p>There is also kinematic viscosity, which accounts for the density of the fluid. This is calculated by dividing the dynamic viscosity by the density of the fluid.$$ν=\frac{μ}{ρ}$$The unit of kinematic viscosity is found like this:$$ν=\frac{Pa⋅s}{\frac{kg}{m³}}=\frac{\frac{N}{m²}⋅s}{\frac{kg}{m³}}=\frac{\frac{kg\frac{m}{s²}}{m²}⋅s}{\frac{kg}{m³}}=\frac{kg⋅s}{m⋅s²}⋅\frac{m³}{kg}=\frac{m²}{s}$$N=kg*(m/s²) from the second law of motion (F=ma).</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Kinematic Viscosity</td>
+          <td>ν</td>
+          <td>Fluid-specific (m/s²)</td>
+        </tr>
+      </table>
+      <h3>Surface Tension</h3>
+      <img src="assets/surface_tension.jpg">
+      <cite>From <a href="https://www.sciencefacts.net/surface-tension.html">ScienceFacts</a></cite>
+      <p>Let's say we have a body of water. The water molecules submerged within it feel cohesive forces (from cohesive bonds with other molecules) from all sides. Those cancel out and the molecules stay still.<br><br>However, molecules at the surface are only bonded to molecules below and to the side of them. They don't feel any cohesive forces from above, which causes them to be pulled inwards. The resistance to this pulling is what causes surface tension, a force directioned up from the body of water. To minimize the potential energy this effect creates - a particle is always trying to reach a lower energy level -, the surface molecules will arrange themselves in the optimal form, that being a collection of spheres (this has the lowest surface area for a volume) to minimize the surface area.<br><br>This surface tension - a small force perpendicular to the water going up -, is what allows bugs like water striders to move across lakes. The surface tension creates a sort of skin, a cohesive layer, at the surface of that body of water.</p>
+      <img src="assets/Water_strider.jpg">
+      <cite>From <a href="https://en.wikipedia.org/wiki/Gerridae#/media/File:Water_strider_(Gerridae_sp).jpg">Wikipedia</a></cite>
+      <p>Calculating the surface tension force is much too complex, because it relies on a lot of different factors.</p>
+      <h3>Drag Force</h3>
+      <p>You've heard of 'drag' before, right? Maybe while talking about airplanes, because it's an important force for aerodynamics. Drag is the air resistance (or just resistance from a fluid in general) it feels when traveling through that air (or fluid). If an airplane travels through the air, it is experiencing fluid resistance (drag) from the air, which is trying to slow it down. This force is directioned opposite of the object's motion, so in the opposite direction of the flying plane.</p>
+      <img src="assets/drag_force.jpg">
+      <cite>From <a href="https://www.sciencefacts.net/drag-force.html">ScienceFacts</a></cite>
+      <p>Deriving the formula for drag force is way too far-fetched, but this is it:$$F_{D}=\frac{1}{2}ρv^{2}C_{D}A$$Here, Fd is drag force, ρ is the density of the fluid, A is the cross-sectional area of the object experiencing drag force, and Cd is the drag coefficient (which depends on the material of the object and its shape).</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Drag Coefficient</td>
+          <td>Cd</td>
+          <td>Material-specific (No unit)</td>
+        </tr>
+      </table>
+      <h3>Lift Force</h3>
+      <p>I already explained the basics of how airplanes stay airborne thanks to a lift force on their wings, due to the curved shape of those wings. I did not yet provide a formula, so here it is:$$L=\frac{1}{2}ρv^{2}SC_{L}$$Where L is lift force, ρ is the density of the fluid (air, most of the time), v is the speed of the air, S is the area (mostly cross-sectional), and Cl is the lift coefficient (which depends on the material of the object and its shape). We will not derive this equation.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Lift Coefficient</td>
+          <td>Cl</td>
+          <td>Material-specific (No unit)</td>
+        </tr>
+      </table>
+      <h3>Terminal Velocity</h3>
+      <p>When an ball is falling through the air, it does not keep accelerating. It can reach its terminal velocity. This is the point at which the ball's velocity is no longer increasing, because the force of gravity is being counteracted by an opposite equal force. In almost every case, this is the sum of the drag force and buoyancy. As you know from the drag force equation, the faster the object, the greater the drag force slowing it down. As the force of gravity acts on our object, accelerating it (F=mg and F=ma) 9.81 meters per second every second, the drag force also increases, and at some point both will be equal (together with buoyancy), cancelling eachother out.<br><br>Let's derive how you can calculate the terminal velocity of an object due to drag. When this is the case, the weight (force of gravity) is equal to the drag force.$$gm=\frac{1}{2}ρv^{2}C_{D}A$$ $$v_{terminal}=\sqrt{\frac{2gm}{ρC_{d}A}}$$This is how you can calculate terminal velocity!</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Viscosity" target="_blank">Wikipedia: Viscosity</a></p>
+      <p><a href="https://www.youtube.com/watch?v=VvDJyhYSJv8" target="_blank">YouTube: Understanding Viscosity</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Surface_tension" target="_blank">Wikipedia: Surface tension</a></p>
+      <p><a href="https://www.sciencefacts.net/surface-tension.html" target="_blank">ScienceFacts: Surface tension</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Drag_(physics)" target="_blank">Wikipedia: Drag</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Terminal_velocity" target="_blank">Wikipedia: Terminal Velocity</a></p>
+      <p><a href="https://www.grc.nasa.gov/www/k-12/WindTunnel/Activities/lift_formula.html" target="_blank">NASA: Lift Force</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

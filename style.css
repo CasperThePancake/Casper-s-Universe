@@ -141,6 +141,14 @@ h3#wordCount {
     font-size:15px;
 }
 
+h3#wordCountTotal {
+    text-align: center;
+    margin:0 !important;
+    margin-top:-10px !important;
+    margin-bottom:20px !important;
+    font-size:15px;
+}
+
 #unitTables {
     display:inline-flex;
     margin-bottom:15px;
@@ -148,4 +156,8 @@ h3#wordCount {
 
 #unitTables table {
     align-self:start;
+}
+
+table {
+    margin-top:5px;
 }

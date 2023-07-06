@@ -33,14 +33,16 @@
     <h2><a href="course/8.html">Mass Flow</a></h2>
     <h2><a href="course/9.html">Gas Laws</a></h2>
     <h2><a href="course/10.html">Pressure in Solids</a></h2>
-    <h3 id="wordCount"></h3>
+    <h2><a href="course/11.html">Heat Capacity</a></h2>
+    <h2><a href="course/12.html">Fluids</a></h2>
+    <h3 id="wordCountTotal" class="total"></h3>
     <script>
 fetch('times.json')
   .then(response => response.json())
   .then(jsonData => {
     if (Array.isArray(jsonData)) {
       const sum = jsonData.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-      document.getElementById("wordCount").innerHTML = "🕒Total reading time: "+Math.round(sum * 10) / 10+" minute(s)"
+      document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round(sum * 10) / 10+" minute(s)"
     } else {
       console.error('Invalid JSON format. Expected an array.');
     }
