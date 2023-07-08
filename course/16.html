@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_grey.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Electromagnetism</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2><a class="crs previous" title="Previous course" href="15.html">&lt </a>Electromagnetism<a class="crs next" title="Next course" href="17.html"> &gt</a></h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Magnetic Flux</h3>
+    <p>Magnetic flux is how much magnetic field strength travels through a surface.$$\Phi=BA$$</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Magnetic Flux (Φ)</td>
+          <td>Weber</td>
+          <td>Wb</td>
+        </tr>
+      </table>
+      <p>What if the magnetic field vector is not coming in perpendicular to the surface?</p>
+      <img src="assets/fluxangle.png">
+      <p>Here you can see that I have drawn Bn, the normal which is perpendicular to A, and also Bt. In normal cases, the angle alpha should be 0°. Our formula here would be Φ=Bn*A, but we want to use B! Luckily the cosine of α in the right triangle is equal to Bn/B, so we have a new formula:$$\Phi=BA⋅cos(\alpha)$$</p>
+      <h3>Magnetic Induction</h3>
+      <p>A magnetic field can create electric current and voltage, but how? If we move a magnet towards a coil, the coil wants to oppose that (Newton's 3rd Law). To do this, it must push the magnet away. If you are approaching the coil with the North pole of the magnet, the coil will create a North pole of its own on that side to oppose the two North poles. However, when the coil creates this North pole, it also inducts a voltage and current!<br><br>Logically, a voltage is only inducted if there is a change in magnetic flux. We can also notice that the speed at which we approach the coil has an impact. The faster we do this motion, the bigger the generated voltage.$$U_{i}\approx \Delta\Phi$$$$U_{i}\approx \frac{1}{\Delta t}$$Since this is an opposing force, our constant of proportionality is -1.$$U_{i}=-\frac{\Delta\Phi}{\Delta t}$$We can also use Ohm's Law to find the formula for inducted current:$$I_{i}=-\frac{\Delta\Phi}{\Delta tR}$$Do note that there is only a current if the circuit is closed. If it is not closed, there is only an inducted voltage.<br><br>In a coil, we have to change the formula slightly to account for the amount of windings like so:$$I_{i}=N⋅-\frac{\Delta\Phi}{\Delta tR}$$</p>
+      <h3>Applications of Magnetic Induction</h3>
+      <p>The first application of this is a magnetic induction stove.</p>
+      <img src="assets/stove_induction.png">
+      <p>Under the stove, there is a coil connected to AC (Alternating Current). The AC causes the direction of the current to alternate constantly, which causes the magnetic field around it to change direction as well. When this magnetic field goes through your pot (which is made of a special metal), there will be a changing magnetic flux due to the AC, causing a voltage. Since this is not a closed circuit, there will not be a current, but the voltage by itself causes the pot to heat up quickly. The useful part is that touching the stove yourself will not cause significant burns.<br><br>A second application is the turbine.</p>
+      <img src="assets/turbine_induction.png">
+      <p>As you can see, there is a rod at the back you can rotate, causing the electric wire to spin around in the homogeneous magnetic field. Doing this causes a change in magnetic flux, resulting in voltage and a current, because this is a closed circuit. You can use this turbine to generate electricity!<br><br>Of course, there is no point to turning the thing manually - unless you're into slavery -, which is why it is used in these amazing inventions:</p>
+      <img src="assets/windturbine.jpg">
+      <cite>From <a href="https://www.bam.de/Content/EN/Standard-Articles/Topics/Energy/article-LeBeWind.html">BAM</a></cite>
+      <p>A wind turbine using the force of wind spinning its blades to generate electricity.</p>
+      <img src="assets/waterturbine.jpg">
+      <cite>From <a href="https://www.istockphoto.com/illustrations/water-turbine">iStock</a></cite>
+      <p>A water turbine using the force of running water to spin blades, generating electricity in a hydro power plant near a dam.</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://www.bol.com/be/nl/p/quark-5-1-leerboek/9200000033559272/" target="_blank">Quark (Textbook)</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

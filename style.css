@@ -52,7 +52,7 @@ td {
     border: 2px black groove;
 }
 
-a:hover {
+a:hover:not(.crs) {
     text-decoration: underline;
     color:gray;
 }
@@ -120,7 +120,7 @@ button {
 }
 
 img {
-    max-width:40%;
+    width:25%;
     border:2px black groove;
     margin-left:15px;
 }
@@ -160,4 +160,12 @@ h3#wordCountTotal {
 
 table {
     margin-top:5px;
+}
+
+.crs {
+    text-shadow:1.5px 1.5px 2px gray;
+}
+
+.crs:hover {
+    cursor:pointer;
 }

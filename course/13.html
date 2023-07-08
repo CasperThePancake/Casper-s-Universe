@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_yellow.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Electrostatics</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2><a class="crs previous" title="Previous course" href="12.html">&lt </a>Electrostatics<a class="crs next" title="Next course" href="14.html"> &gt</a></h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Introduction</h3>
+    <p>Time to get electric with a few courses about electricity! In this first course, we'll be looking at static electricity, which is electricity that doesn't move. Next up will be electrodynamics.</p>
+    <h3>Electrometer</h3>
+    <img src="assets/electrometer.jpg">
+    <cite>From <a href="https://www.vectorstock.com/royalty-free-vector/electrometer-vector-1998405">VectorStock</a></cite>
+    <p>Above is an image of an electrometer, a device used to measure electricity. This is an old model, but it's easy to explain.<br><br>Let's say we take a ruler and we rub it with some cloth, to give it some static electricity. We then touch the electrometer (the top part) with this ruler, transferring the electricity.<br><br>There are now negative charges all across our electrometer. Since equal charges oppose eachother, the electric charges on the middle rod will oppose those on the thin indicator rod, which will make the indicator rod move, allowing us to read a value from the electrometer.<br><br>Additionally, we can break the electrometer by, instead of touching it with the static electricity, holding that ruler near the top without touching it. This will create electric influence.<br><br>Before we did anything, the electrometer contained an equal amount of positive and negative charges, making it seemingly neutral. Due to influence, those positive charges will move to the top, attempting to reach the negative charges on the ruler.<br><br>We can then touch the electrometer with our hand, while standing on the ground, to cause the negative charges to face electrical ground. This means they will travel through our body, out of the electrometer and to the ground.<br><br>Now only the positive charges remain, so we will remove the ruler, stopping the influence. The electrometer is now filled with positive charges that oppose eachother. This means the meter will permanently show a measurement, that is, until we reset it by touching it with the electrical ruler.</p>
+    <h3>Conductors, Insulators, Semi-Conductors</h3>
+    <p>Let's take a quick peek at some chemistry. If a wire is made from an atom that has 1, 2, or 3 valence electrons (electrons on the outermost shell), this atom must lose electrons to reach the noble gas configuration. Since it must give its electrons away, those can move freely. These atoms are conductors.<br><br>An atom with 5, 6, or 7 valence electrons has to gain some electrons, so its electrons cannot move freely. These atoms are insulators.<br><br>Finally, an atom with 4 valence electrons is a special type, it is a semi-conductor.</p>
+    <h3>Coulomb</h3>
+    <p>To analyze one electric charge and the effects it has on another electric charge (opposing or attracting), we will introduce the coulomb.</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Electric Charge (Q)</td>
+          <td>Coulomb</td>
+          <td>C</td>
+        </tr>
+      </table>
+      <p>Let's derive a cool little formula to calculate the coulomb force one charge has on another. Logically, this will be proportional to the electric charge of both the charges, and their distance.$$F\approx |Q_{1}|$$$$F\approx |Q_{2}|$$$$F\approx \frac{1}{r^{2}}$$Why it is inversely proportional to the square of the distance is tied to experimental findings.$$F\approx \frac{|Q_{1}||Q_{2}|}{r^{2}}$$$$F=c⋅\frac{|Q_{1}||Q_{2}|}{r^{2}}$$This constant will have the symbol 'k', and it stands for the electric permittivity of the medium between the charges. In most cases, this will be air.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Electric permittivity</td>
+          <td>k</td>
+          <td>Medium-specific ((N*m²)/C²)</td>
+        </tr>
+      </table>
+      <p>$$F=k_{e}⋅\frac{|Q_{1}||Q_{2}|}{r^{2}}$$</p>
+      <p>In a vacuum, which we'll be using for our calculations, the electric permittivity is equal to 8.99*10^9 (N*m²)/C².</p>
+      <img src="assets/coulombs_law.png">
+      <cite>By <a href="https://en.wikipedia.org/wiki/en:User:Dna-webmaster" class="extiw" title="w:en:User:Dna-webmaster">User:Dna-Dennis</a>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3448720">Link</a></cite>
+      <p>This is also referred to as Coulomb's Law. When making a diagram of a situation with electric charges, make sure the vectors' lengths depict the magnitudes of the Coulomb force. You can also calculate the total force on a charge (e.g. if there are 4 charges) using vector mathematics, the cosine rule, etc.</p>
+      <h3>Electric Field Strength</h3>
+      <p>Now let's go back a bit. Right now we're studying two charges that are affecting eachother. But what about a random point around one charge, does it also feel something?<br><br>Yes! It feels electric field strength. Obviously, we only need to use the source charge in our equation, so:$$E=\frac{F}{Q}$$We are removing the 'test charge' from our Coulomb force equation to get the new electric field strength equation.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Electric Field Strength (E)</td>
+          <td>Newton per coulomb</td>
+          <td>N/C</td>
+        </tr>
+      </table>
+      <p>I cannot stress enough that the symbol E here has nothing to do with energy!$$E=k_{e}\frac{|Q_{s}|}{r^{2}}$$</p>
+      <img src="assets/Electric_dipole_field_lines.png">
+      <cite><a href="https://commons.wikimedia.org/wiki/File:Electric_dipole_field_lines.svg">Sharayanan</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</cite>
+      <p>What you see here are two charges, a positive one and a negative one, with field lines drawn around them. Logically, these lines always go from positive to negative. Field lines are lines representing the direction of the electric field strength in that point. For example, if you place a point on any of the red lines, the direction of the electric field strength in that point will follow the field lines. Here are two more situations.</p>
+      <img src="assets/other_electric_field_lines.png">
+      <cite>From <a href="https://www.schoolphysics.co.uk/age16-19/Electricity%20and%20magnetism/Electrostatics/text/Electric_fields/index.html">Schoolphysics</a></cite>
+      <p>On the left you see a radial field, where the positive charge is opposing, so all of the field lines go away from this charge.<br><br>On the right you see a homogeneous field, where they are all going in the same direction.<br><br>Anther property of field lines is that, the closer they are, the stronger the field strength is. Finally, the electric field strength is larger at sharp edges, like on a lightning rod.</p>
+      <h3>Electric Potential Energy & Potential</h3>
+      <p>Electric Potential Energy is not a vector, but its formula comes from our previous vector formulas.$$E_{pot}=QEr$$In other words, we can calculate it like so:$$E_{pot}=k_{e}\frac{|Q_{1}||Q_{2}|}{r}$$Similar to how we had electric field strength, which was coulomb force divided by charge, we have electric potential, which is the electric potential energy divided by charge.<br><br>The electric potential, also known as the voltage, indicates the electric potential energy per unit of charge.$$V=Ex$$$$V=k_{e}\frac{Q_{s}}{r}$$There are also equipotential lines, lines where the electric potential is equal.</p>
+      <img src="assets/equipotential_lines.jpg">
+      <cite>From <a href="https://courses.lumenlearning.com/suny-physics/chapter/19-4-equipotential-lines/">LumenLearning</a></cite>
+      <p>The blue lines here are electric field lines, while the green ones are equipotential lines. You may be able to tell that, where the lines cross, there is always a right angle (90°).</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Electric Potential (V)</td>
+          <td>Volt</td>
+          <td>V</td>
+        </tr>
+      </table>
+      <h3>Electric Voltage</h3>
+      <p>The difference between two electric potentials is also known as electric voltage.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Electric Voltage (U)</td>
+          <td>Volt</td>
+          <td>V</td>
+        </tr>
+      </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Coulomb%27s_law" target="_blank">Wikipedia: Coulomb's Law</a></p>
+      <p><a href="https://www.bol.com/be/nl/p/quark-5-1-leerboek/9200000033559272/" target="_blank">Quark (Textbook)</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

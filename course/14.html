@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_yellow.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Electrodynamics</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2><a class="crs previous" title="Previous course" href="13.html">&lt </a>Electrodynamics<a class="crs next" title="Next course" href="15.html"> &gt</a></h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Electric Current</h3>
+    <p>Let's make these electric charges move in an electric circuit!</p>
+    <img src="assets/Basic_circuit_diagram.png">
+    <cite>From <a href="https://www.12voltplanet.co.uk/electrical-circuit-basics.html">12 Volt Planet</a></cite>
+    <p>If there is electric current.</p>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Electric Current (I)</td>
+          <td>Amps</td>
+          <td>A</td>
+        </tr>
+      </table>
+      <p>Electric current is defined by the amount of coulombs that pass through the circuit every second.$$I=\frac{\Delta Q}{\Delta t}$$This means you can calculate the electric capacity (or how much current is being used) with this formula:$$\Delta Q=I\Delta t$$Most alkaline batteries have an electric capacity of 1000 mAh. This means they can deliver an electric current of 1000 mA for one hour.</p>
+      <h3>Atomic Scale</h3>
+      <p>When we look at atoms flowing through our electric circuit, we see loads of electrons flowing from the negative end of the circuit to the positive end. Eventhough, at an atomic level, this is how it all functions, we'll be defining that electric current always moves from positive to negative, + to -. You can blame the ancient Greeks for this.</p>
+      <h3>Ohm's Law</h3>
+      <p>Before we derive Ohm's Law, I want to introduce electric flow as a metaphor. Imagine a running tap in your kitchen. The height of the water flow represents the voltage, and the speed of the flow represents the electric current.<br><br>From this metaphor it's easy to understand that a higher voltage (a taller water stream) means a higher current (faster tap water) and vice versa. This means that voltage divided by current is a constant. This constant is the resistance (R).</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+        </tr>
+        <tr>
+          <td>Electric Resistance (R)</td>
+          <td>Ohm</td>
+          <td>Ω</td>
+        </tr>
+      </table>
+      $$R=\frac{U}{I}$$
+      <h3>Ammeters & Voltmeters</h3>
+      <p>To measure amps and volts in a circuit, you can place ammeters and voltmeters (respectively) on the circuit.<br><br>If we want to measure the amount of amps to perfect accuracy, we want the voltage to be 0, so the perfect resistance of an ammeter would be 0.<br><br>If we want to measure the voltage to perfect accuracy, we want the current to be 0, so the perfect resistance of a voltmeter would be infinity (dividing by zero equals infinity).</p>
+      <img src="assets/ammeter_voltmeter.png">
+      <cite>From <a href="https://byjus.com/question-answer/how-is-an-ammeter-connected-in-a-circuit-how-is-a-voltmeter-connected-in-a-circuit/">Byju's</a></cite>
+      <p>This is why a voltmeter must be placed on a parallel circuit, while an ammeter can be placed in a series circuit.</p>
+      <h3>Resistance & Temperature</h3>
+      <p>Resistance's proportionality to temperature depends on whether we're talking about conductors or insulators. In conductors, a higher temperature means a higher resistance. In insulators, a higher temperature means a lower resistance. In both cases, the drop or increase in resistance is little to none.<br><br>However, scientists have discovered that, in a conductor, resistance drops to near 0 at freezing cold temperatures. This is called superconduction, and it could be a solution for the energy crisis. If superconduction is applied to all electricity in the world, no current would be lost, so you could put a current into a circuit once and it'd stay there (pretty much) forever.</p>
+      <h3>Electrical Energy</h3>
+      <p>Finally we can derive this formula. Electrical energy is proportional to current, voltage and time. Time is involved here because just multiplying current and voltage would give the same number all the time, even if you've been using your circuit for 3 hours.$$E=UI\Delta t$$Because of Ohm's law, these formulas are also possibilities:$$E=RI^{2}\Delta t$$$$E=\frac{U^{2}}{R}\Delta t$$</p>
+      <h3>Electrical Power</h3>
+      <p>We already talked about power (energy per unit of time), so let's derive multiple possible formulas here as well.$$P=\frac{E}{\Delta t}$$$$P=UI$$$$P=RI^{2}$$$$P=\frac{U^{2}}{R}$$Additionally:$$E=P\Delta t$$</p>
+      <h3>Power Usage</h3>
+      <p>If you look at how much energy you're consuming at home, a value is probably denoted in kWh. This is a possible unit for electrical energy, so you could convert it to Joules.$$1 kWh=1⋅10^{3}⋅3600 Ws = 3600000J$$And you can calculate your bills before they arrive...</p>
+      <h3>Circuits with Resistors</h3>
+      <p>We already know the difference between series circuits and parallel circuits.</p>
+      <img src="assets/Series_circuit.png">
+      <cite>From <a href="https://en.wikipedia.org/wiki/Series_and_parallel_circuits">Wikipedia</a></cite>
+      <p>This is a series circuit.</p>
+      <img src="assets/parallel_circuit.png">
+      <cite>From <a href="https://pressbooks.bccampus.ca/basicelectricity/chapter/ground/">BCcampus Pressbooks</a></cite>
+      <p>This is a parallel circuit.</p>
+      <p>Let's start with a series circuit, and let's go back to our tap water metaphor. A series circuit here is like the water dropping in different little waterfalls. Every waterfall here represents a resistor (which adds resistance to the circuit) on our circuit. The speed of the water at each waterfall is the same. The electric current stays the same in a series circuit, but since the resistance changes, the voltage also changes.<br><br>In a series circuit, the total current is equal to the current at every resistor, but the total voltage is equal to the sum of the voltage at every resistor. Thanks to these findings we can derive a formula to calculate the substitution resistance of the entire circuit.$$I=I_{1}=I_{2}=I_{3}$$$$U=U_{1}+U_{2}+U_{3}$$$$R_{S}I=R_{1}I_{1}+R_{2}I_{2}+R_{3}I_{3}$$$$R_{S}=R_{1}+R_{2}+R_{3}$$</p>
+      <p>Next up is a parallel circuit.<br><br>In our metaphor, imagine this as the stream of water splitting in two, and eventually joining back together. As you can tell, the height is the same, so the voltage is the same, but since the resistance changes, the speed is not the same, so the current is not the same.<br><br>In a parallel circuit, the total voltage is equal to the voltage at every resistor, but the total current is equal to the sum of the current at every resistor.$$U=U_{1}=U_{2}=U_{3}$$$$I=I_{1}+I_{2}+I_{3}$$$$\frac{U}{R_{S}}=\frac{U_{1}}{R_{1}}+\frac{U_{2}}{R_{2}}+\frac{U_{3}}{R_{3}}$$$$\frac{1}{R_{S}}=\frac{1}{R_{1}}+\frac{1}{R_{2}}+\frac{1}{R_{3}}$$</p>
+      <h3>Pouillet's Law</h3>
+      <p>Pouillet's law says something about the proportionality between resistance, length, cross-sectional area and the material of a circuit.$$R\approx l$$$$R\approx \frac{1}{A}$$$$R\approx material$$This all makes sense. The longer the conductor, the higher the resistance. The bigger its cross-sectional area, the more current can flow through, the lower the resistance. It also depends on the material of the conductor. The constant of proportionality is the electric resistivity of the material.$$R=ρ\frac{l}{A}$$</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Electric Resistivity</td>
+          <td>ρ</td>
+          <td>Material-specific (Ω*m)</td>
+        </tr>
+      </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://www.bol.com/be/nl/p/quark-5-1-leerboek/9200000033559272/" target="_blank">Quark (Textbook)</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>
