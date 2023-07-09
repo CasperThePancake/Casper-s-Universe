@@ -94,17 +94,43 @@
           <th>Symbol</th>
         </tr>
         <tr>
-          <td>Shear Modulus (G)</td>
-          <td>Pascal</td>
-          <td>Pa</td>
-        </tr>
-        <tr>
             <td>Shear Stress (τ)</td>
             <td>Pascal</td>
             <td>Pa</td>
           </tr>
       </table>
-      <p>If we know an object's height, shear modulus, and shear stress (the pressure on it), we can calculate the deformation in meters like so:$$\Delta x=\frac{hτ}{G}$$where Δx is the deformation, h is the height of the object, G is the shear modulus, and τ is the shear stress or the pressure acting on the object.<br><br>Congratulations, you now have a great understanding of pressure, stress, tension, and strain on solid objects!</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Shear Modulus</td>
+          <td>G</td>
+          <td>Material-specific (Pa)</td>
+        </tr>
+      </table>
+      <p>If we know an object's height, shear modulus, and shear stress (the pressure on it), we can calculate the deformation in meters like so:$$\Delta x=\frac{hτ}{G}$$where Δx is the deformation, h is the height of the object, G is the shear modulus, and τ is the shear stress or the pressure acting on the object.</p>
+      <h3><u>Friction</u></h3>
+      <p>I probably should have covered friction before, but it is the force an object experiences in the opposite direction of its motion when sliding along a surface. You already learned about normal force, which is created when an object is placed on a surface, causing the force of gravity to act on the object and thus on the surface, to which the surface responds with an equal opposite force called normal force by Newton's third law of motion. This comes with some friction in the opposite direction of the object's (impending) motion. The higher this motion's force, the higher the friction, they are proportional, and the constant of proportionality μ (dependant on the surface's material) gives us a new formula:$$F_{friction}=\mu N$$</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Friction Coefficient</td>
+          <td>μ</td>
+          <td>Material-specific (No unit)</td>
+        </tr>
+      </table>
+      <h3><u>Example Exercise</u></h3>
+      <p>Let's combine a bunch of our knowledge to solve one exercise.</p>
+      <img src="assets/example_exercise.png">
+      <cite>From <a href="https://www.youtube.com/watch?v=Kbe06L9lJ18">YouTube</a></cite>
+      <p>In this situation, two objects are connected via a rope, and the first object also has a rope to be pulled by. A tension force of 45N is applied to the first object, accelerating them both across a surface. We must determine the acceleration of this situation, as well as the tension force in the second rope.<br><br>Let's begin by calculating the acceleration of the entire thing. If we add everything together, the mass is 5.0 kg. We can then calculate the force of gravity acting on the entire thing.$$F=5.0kg*9.81\frac{N}{kg}=49.05N$$This means our normal force is also equal to 49.05N. There is friction, which we can calculate like so:$$F_{friction}=49.05N*0.20=9.81N$$We want to calculate acceleration, so we need the total forward force, which is the tension force minus the friction force.$$F=45N-9.81N=35.19N$$Now we use F=ma to calculate acceleration:$$a=\frac{F}{m}=\frac{35.19N}{5.0kg}=7.038\frac{m}{s^{2}}$$And we have the solution for the first part of the exercise.<br><br>The second part wants us to calculate the tension force on rope 2. Remember that the tension force on rope 1 is that 45N, the same as the force on object 1. We must thus calculate the tension force on object 2.<br><br>The force of gravity is as follows:$$F=2.0kg*9.81\frac{N}{kg}=19.62N$$This is the same as the normal force, so we calculate friction:$$F_{friction}=19.62N*0.2=3.924N$$We already know this has an acceleration of 7.038 m/s², so we can calculate the total force on object 2 next:$$F=2.0kg*7.038\frac{m}{s^{2}}=14.076N$$Okay, so we know this 14.076N is the result of the tension force minus the friction force, which we already know. This means we can get our tension force!$$14.076N=F_{tension}-3.924N$$Switch some values around, and you'll find that the tension force is equal to a beautiful 18N exactly. We've solvd the exercise!</p>
       <hr class="solid">
       <h2>Sources</h2>
       <p><a href="https://en.wikipedia.org/wiki/Deformation_(physics)" target="_blank">Wikipedia: Strain</a></p>
@@ -115,6 +141,7 @@
       <p><a href="https://en.wikipedia.org/wiki/Elastic_modulus" target="_blank">Wikipedia: Elastic Modulus</a></p>
       <p><a href="https://en.wikipedia.org/wiki/Deformation_(physics)" target="_blank">Wikipedia: Deformation</a></p>
       <p><a href="https://en.wikipedia.org/wiki/Shear_modulus" target="_blank">Wikipedia: Shear Modulus</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Friction" target="_blank">Wikipedia: Friction</a></p>
       <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
     <!-- Scroll bar code -->
     <script>

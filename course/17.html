@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_grey.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Celestial Mechanics</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2><a class="crs previous" title="Previous course" href="16.html">&lt </a>Celestial Mechanics<a class="crs next" title="Next course" href="18.html"> &gt</a></h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Kepler's Laws</h3>
+    <p>Kepler's Laws say a whole lot about the orbits of planets around stars. Let's begin with his first law of planetary motion.</p>
+    <q>The orbit of a planet is an ellipse with the Sun at one of the two foci.</q>
+    <p>What is an ellipse? An ellipse is like a circle, but stretched out so that the radius is not equal everywhere.</p>
+    <img src="assets/ellpise.svg">
+    <cite>From <a href="https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:conics/x9e81a4f98389efdf:ellipse-foci/a/ellipse-foci-review">Khan Academy</a></cite>
+    <p>Every ellipse has two focal points. For any point P on our ellipse (like the pink point in the example), the sum of the distances from that point to each focal point should be equal to the length of the major axis.<br><br>The major axis of an ellipse is the longest line you can draw through the center (green line in the example). This means that, in this example, the length of the entire green line is equal to the combined lengths of the two dotted pink lines. This works for any point on the ellipse.<br><br>You can find the focal points of any ellipse by going through this process:<br>1. Find the center of the ellipse<br>2. Draw the major axis (longest line through the center) and the minor axis (shortest line through the center)<br>3. Take a compass and use it to measure the length of half of the major axis<br>4. Put your compass on the point where the ellipse and the minor axis cross (any of the two will work)<br>5. Use your compass to draw a circle (with a radius equal to half the length of the major axis) around that point<br>6. The points where your circle crosses the major axis are your two focal points</p>
+    <img src="assets/Kepler_laws_diagram.svg">
+    <cite><a href="https://commons.wikimedia.org/wiki/File:Kepler_laws_diagram.svg">Hankwang</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</cite>
+    <p>In this diagram two ellipses are shown, together with their two focal points. These ellipses represent the orbits of two planets around the same star. By Kepler's first law we know that their orbits are ellipses to begin with, but also that this star can be found on one of the two focal points of the ellipses.<br><br>Basically, if you have the orbits of two planets as ellipses, together with their focal points, you'll notice that there will be two overlapping focal points, which is where your star is.<br><br>Let us continue with the second law:</p>
+    <q>A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time.</q>
+    <p>A line segment in this scenario is a line between your planet and the Sun. Over time - as the planet does its orbit thing - this line segment will draw out an area. What Kepler says is that two areas with the same area will be drawn out in the same amount of time.<br><br>On our diagram, two areas (A1 and A2) are given. Their area is equal, and the planet will draw them in an equal amount of time. This means it is moving faster when it is drawing A1 and slower when it is drawing A2.<br><br>It is then logical to conclude that, the closer it is to its star, the faster a planet moves, and the further it is from its star, the slower a planet moves.<br><br>The major axis has two points crossing the ellipse itself, one of which is much closer to the star than the other. The point closest to the star is called the perihelion, and the point farthest from the star is called the aphelion. The planet travels the fastest at the perihelion, and the planet travels the slowest at the aphelion.<br><br>Now for the final, third law:</p>
+    <q>The square of a planet's orbital period is proportional to the cube of the length of the semi-major axis of its orbit.</q>
+    <p>This speaks for itself, but Kepler does mention 'proportional', so adding in a constant of proportionality gives us this formula:$$T^{2}=\frac{4\pi^{2}}{GM}a^{3}$$Where T is the orbital period (in seconds), G is the gravitational constant, M is the mass of the star, and a is the length of the semi-major axis of the planet's orbit. We can use this to calculate the length of the Earth's orbit around the sun with the following values.<br><br>G = 6.674×10−11 m3⋅kg−1⋅s−2<br>M = 1.989×10^30 kg<br>a = 149597887.5×10^3 m<br><br>Plugging in these values gives us an approximation of T, which is 2.99 x 10^4 s. Calculating this to years gives a result of 0.949 years. The reason why this isn't 1 year is because we are doing an approximation. Our formula did not take the eccentricity of the ellipse (how stretched it is) into account. We could add the length of the minor axis into our equation to get a more accurate result. For Earth's orbit this does not matter too much because it is quite close to being a circle. Its eccentricity is equal to 0.0167. Mercury has an eccentricity of 0.2, which is the highest of all planets in our solar system, this means our old formula would show a very inaccurate result for Mercury's orbit.<br><br>This third law also tells us that the planets farthest from a star have the longest orbital periods. Mercury (closest to the Sun) has an orbital period of 88 days. Neptune (farthest from the Sun) has an orbital period of 60190 days, which is over 165 Earth years.</p>
+    <h3>The Two-Body Problem</h3>
+    <p>The two-body problem is a mathematical problem where you have a universe with nothing but two bodies, one small and one large. The small body orbits around the large body and the core of the problem is to determine how it orbits around the large body. We are assuming that the center of mass of our large body is also the geometrical center of the large body, which we are also assuming is a sphere. Finally we assume that the small body does not influence the large body. This is a good assumption since the acceleration due to gravity is little to nothing (see Newton's universal law of gravitation).<br><br>To determine just how the small body will orbit around the large body, we need to find the velocity vector. When the small body enters the orbit, it already has an initial velocity (otherwise it'd just plummet straight towards the large body). After that the force of gravity applies acceleration on the small body, which changes its trajectory to an orbit around the large object. If the initial velocity is too small or the acceleration due to gravity is too large, this orbit may not be stable, causing your small body to eventually collide with the large body.<br><br>Anyways, you can calculate the acceleration using two formulas. First, we use Newton's law of universal gravitation:$$F=G\frac{m_{small}m_{large}}{r^{2}}$$After that we find acceleration from F=ma like this:$$a=\frac{F}{m_{small}}=G\frac{m_{large}}{r^{2}}$$And this is how you solve the two-body problem (if you wish to spend time drawing the vectors and using trigonometry to determine the eventual orbit).</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion" target="_blank">Wikipedia: Kepler's Laws</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Two-body_problem" target="_blank">Wikipedia: Two-Body Problem</a></p>
+      <p><a href="https://www.youtube.com/watch?v=nJ_f1h49jfM" target="_blank">YouTube: The Two Body Problem</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>
