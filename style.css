@@ -169,3 +169,7 @@ table {
 .crs:hover {
     cursor:pointer;
 }
+
+iframe {
+    margin-left:15px;
+}

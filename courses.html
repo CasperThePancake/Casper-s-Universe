@@ -46,7 +46,8 @@ fetch('times.json')
   .then(jsonData => {
     if (Array.isArray(jsonData)) {
       const sum = jsonData.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-      document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round(sum * 10) / 10+" minute(s)"
+      console.log(sum)
+      document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round((sum/60) * 100) / 100+" hours"
     } else {
       console.error('Invalid JSON format. Expected an array.');
     }
