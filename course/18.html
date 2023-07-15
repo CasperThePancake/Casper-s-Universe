@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_red.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Thermodynamics</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../units.html">Units</a>
+        <a href="../formulas.html">Formulas</a>
+    </nav>
+    <h1>Physicae</h1>
+    <h5>by Casper</h5>
+    <h2><a class="crs previous" title="Previous course" href="17.html">&lt </a>Thermodynamics<a class="crs next" title="Next course" href="19.html"> &gt</a></h2>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Laws of Thermodynamics</h3>
+    <p>Let's begin this new course with the 4 laws of thermodynamics.<br><br>The zeroth law of thermodynamics says that if two systems are in thermal equilibrium with a third system, they are also in thermal equilibrium with eachother. This is quite logical. It allows us to define what temperature here is and also heat flow between systems.<br><br>The first law of thermodynamics defines internal energy. This new type of energy has nothing to do with kinetic or potential energy in a thermodynamic context, but in a more general context it can encompass those as well. The internal energy of a system changes each time it does work or transfers heat. This can be written in the following equation:$$\Delta U=Q-W$$The second law of thermodynamics introduces us to entropy. Entropy is a measure for the disorder or randomness in a system. Entropy tends to increase as time goes by.<br><br>The third and final law of thermodynamics states that, when a system reaches absolute zero (0K or -273°C), the entropy nears its minimum. Because of this, it is thought to be impossible for a system to reach absolute zero.</p>
+    <h3>Types of Systems</h3>
+    <p>There are 3 main systems in thermodynamics: closed, open, and isolated.<br><br>An open system is one where both matter and energy can be exchanged with the surroundings of the system. An example of this is a hot cup of tea, where matter (steam) and energy are being exchanged with the surroundings of the system.<br><br>Closed systems allow the exchange of energy, but not matter. A great example of this is a sealed container with gas inside. The container is closed, so no matter can get out, but it can still exchange energy with its surroundings.<br><br>Finally, isolated systems prevent both the exchange of energy and the exchange of matter. An example of this would be a thermos flask, where (obviously) no matter is exchanged, but the exchange of energy is also minimized. A thermos flask is supposed to keep your liquids at their original temperature after all.</p>
+    <h3>Types of Processes</h3>
+    <p>First up is an isothermal process. This means the temperature is constant. When gas laws apply here, that also means p*V is a constant (see Gas Laws). If you have an ideal gas, where the formula pV=nRT applies, the entirety of the internal energy remains constant, because any work done is balanced out by heat transfer for your ideal gas.<br><br>Next up are adiabatic processes, where the amount of heat transferred to and from the system is 0. No heat being exchanged with the surroundings does not mean the temperature is constant. When there is no heat transfer, but there is work being done, that means the internal energy will decrease. As I mentioned before, in a general system, internal energy is related to kinetic energy, so a decrease in kinetic energy is also caused. This means the particles slow down, so the temperature also decreases.<br><br>Next is an isobaric process, where pressure is constant. In this case both volume and pressure can change. An example of this is a container at constant pressure that you heat up, with a piston at the top. As the gas expands, the piston will also be forced upwards due to the increasing temperature and volume.<br><br>Finally there are isochoric processes, also known as isovolumetric processes, where the volume is constant. This means temperature and pressure can change. This doesn't really have any useful examples.</p>
+    <h3>Heat Engines</h3>
+    <p>There exist many types of engines, but since this is a course on thermodynamics, we'll begin by discussing heat engines. These engines use heat to produce energy or work, which can generate electricity. It consists of 4 steps.<br><br><u>Step 1: Compression</u><br>With the help of an external force, we compress an amount of gas such that the pressure rises and the temperature also rises (like adiabatic expansion, but the other way around).<br><br><u>Step 2: Heating</u><br>The heat comes into play right here. We move our gas into this hot area, which causes it to expand.<br><br><u>Step 3: Expansion</u><br>The gas is expanding, causing it to do work on the surrounding area. This could spin a turbine, or push a piston.<br><br><u>Step 4: Cooling</u><br>The hot gas is now cooled down (with a cooling system) and the cold gas can now be used in the same cycle again.<br><br>This entire process both uses up energy (for the compression and cooling), but it also produces energy. Luckily it produces much more energy than it uses it, otherwise you wouldn't call it an engine!<br><br>This entire cycle is also called a Carnot cycle. You can measure its efficiency using Carnot efficiency, with this equation:$$η_{carnot}=\frac{T_{high}-T_{low}}{T_{high}}$$Where T (high) is the temperature of the source of the thermal energy and T (low) is the temperature of the low-temperature reservoir to which we pump the remaining heat at the end of the cycle.</p>
+    <h3>Refrigerators</h3>
+    <p>In thermodynamics, we know that heat will always go from a region with high temperature to a region with low temperature. However, in a refrigerator, we try to remove heat from a cold region and pump it out to a hotter region. This requires external energy, which is why a refrigerator won't work without electricity.<br>This process also consists of 4 steps, like the heat engine cycle.<br><br><u>Step 1: Compression</u><br>The refrigerant (a gas) is compressed by a compressor, which requires external energy. This increases its pressure and temperature.<br><br><u>Step 2: Condensation</u><br>Next, it passes through an expansion valve, where it gives off heat to its surroundings (this will be pumped out) and also loses energy. It becomes a liquid, that is why this step is called condensation.<br><br><u>Step 3: Expansion</u><br>The condensed liquid passes through an expansion valve, causing the pressure to reduce. The liquid expands.<br><br><u>Step 4: Evaporation</u><br>The expanding liquid absorbs heat from its surroundings (the inside of the refrigerator) to gain energy and temperature, it evaporates (turns back into a gas). After that it goes back to the compressor and the cycle repeats.<br><br>The coefficient of performance is a measure of how efficient a refrigerator is.$$C_{p}=\frac{Q_{removed}}{W_{input}}$$It is a ratio of how much heat is removed and the work that was put in (for the compressor).</p>
+    <h3>Steam Power Plants</h3>
+    <p>Finally there is the cycle used in steam power plants, the Rankine cycle. Examples of steam power plants include using fossil fuels to generate electricity and even nuclear power plants. It consists of 4 steps once again.<br><br><u>Step 1: Boiler</u><br>With the energy from either fossil fuels or nuclear energy, a liquid (water) is heated up and begins to boil. This causes it to let off high-pressure steam.<br><br><u>Step 2: Turbine</u><br>The high-pressure steam enters the area with a turbine, where its temperature decreases, its pressure decreases, and it expands. This causes it to do work on the turbine blades. In other words, the thermal energy of the steam is converted into mechanical work. The turbine then converts this mechanical work into electricity.<br><br><u>Step 3: Condenser</u><br>The low-pressure steam now enters a condenser, where it is converted back into a liquid, this is done by extracting heat from the gas and putting that heat into cooling water.<br><br><u>Step 4: Pump</u><br>In the final step, the liquid is pumped back into the boiler. This requires external work to overcome the pressure difference and to maintain steady flow. While being pumped, the liquid's pressure increases. The cycle can now start again.<br><br>As a quick sidenote, you may have seen that nuclear power plants have steam coming out the top. This is because of the condenser. The low-pressure steam goes through cooling towers with cooling water, which extracts the heat from the steam, causing it to condense. To release this heat, the cooling water is released into the air, causing that visible steam.<br><br>Possible equations for Rankine efficiency include the ratio of output work and input heat, or (T(high)-T(low))/T(high).</p>
+    <h3>Enthalpy</h3>
+    <p>Enthalpy is a measure for the total heat content of a system at constant pressure. This is its equation:$$H=U+pV$$Where H is enthalpy, U is internal energy, p is pressure, and V is volume.</p>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Unit</th>
+        <th>Symbol</th>
+      </tr>
+      <tr>
+        <td>Enthalpy (H)</td>
+        <td>Joules</td>
+        <td>J</td>
+      </tr>
+    </table>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Enthalpy" target="_blank">Wikipedia: Enthalpy</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Thermodynamics" target="_blank">Wikipedia: Thermodynamics</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Laws_of_thermodynamics" target="_blank">Wikipedia: Laws of Thermodynamics</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>
