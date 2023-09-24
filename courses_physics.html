@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png?v=2">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <title>Physics Courses</title>
+</head>
+<body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1>🌍 Casper's Universe 🪐</h1>
+    <h5>by Casper</h5>
+    <h2><a href="course_physics/1.html">Newton's Laws of Motion</a></h2>
+    <h2><a href="course_physics/2.html">3 Equations of Motion</a></h2>
+    <h2><a href="course_physics/3.html">Newton's Law of Universal Gravitation</a></h2>
+    <h2><a href="course_physics/4.html">Work and Energy</a></h2>
+    <h2><a href="course_physics/5.html">Forms of Energy</a></h2>
+    <h2><a href="course_physics/6.html">Pressure</a></h2>
+    <h2><a href="course_physics/7.html">The Bernoulli Principle</a></h2>
+    <h2><a href="course_physics/8.html">Mass Flow</a></h2>
+    <h2><a href="course_physics/9.html">Gas Laws</a></h2>
+    <h2><a href="course_physics/10.html">Pressure in Solids</a></h2>
+    <h2><a href="course_physics/11.html">Heat Capacity</a></h2>
+    <h2><a href="course_physics/12.html">Fluids</a></h2>
+    <h2><a href="course_physics/13.html">Electrostatics</a></h2>
+    <h2><a href="course_physics/14.html">Electrodynamics</a></h2>
+    <h2><a href="course_physics/15.html">Magnetism</a></h2>
+    <h2><a href="course_physics/16.html">Electromagnetism</a></h2>
+    <h2><a href="course_physics/17.html">Celestial Mechanics</a></h2>
+    <h2><a href="course_physics/18.html">Thermodynamics</a></h2>
+    <h2><a href="course_physics/19.html">The Standard Model</a></h2>
+    <h2><a href="course_physics/20.html">Radioactive Decay</a></h2>
+    <h3 id="wordCountTotal" class="total"></h3>
+    <script>
+fetch('times_physics.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    if (Array.isArray(jsonData)) {
+      const sum = jsonData.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      console.log(sum)
+      document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round((sum/60) * 100) / 100+" hours"
+    } else {
+      console.error('Invalid JSON format. Expected an array.');
+    }
+  })
+  .catch(err => console.error('Error fetching JSON:', err));
+
+    </script>
+</body>
+</html>
