@@ -67,6 +67,7 @@ body {
     /* background-image: url('assets/bg.jpg'); */
     margin:0;
     overflow-x:hidden;
+    padding-bottom:15px;
 }
 
 * {
@@ -94,6 +95,10 @@ button {
     background-color:lightgreen;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     transition-duration:0.3s;
+}
+
+button.underConstruction {
+    background-color:orange;
 }
 
 button:hover {
