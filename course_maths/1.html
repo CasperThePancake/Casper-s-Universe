@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../course_physics/assets/favicon_green.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Derivative</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../subjects.html">Subjects</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+    <h1>🌍 Casper's Universe 🪐</h1>
+    <h5>by Casper</h5>
+    <h2>Derivative<a class="crs next" title="Next course" href="2.html"> &gt</a></h2>
+    <h3 id="courseBack"><a href="../courses_maths.html">Back to courses</a></h3>
+    <h3 id="wordCount">COUNT</h3>
+    <h3>Introduction</h3>
+    <p>I hope you know what a function is. If you don't, you probably shouldn't be here yet. Here's an example of a simple one:</p>
+    <img src="assets/quadratic_function.png">
+    <p>Let's say this graph depicts the movement of a car. The x-axis is time, and the y-axis is the position of the car. You can obviously tell that the car moves forward while slowing down, eventually slowing down so much that it starts going backwards at a constantly faster pace. The question then becomes: just how fast is the car moving?<br><br>The approach you most likely already know is taking an interval and calculating the speed in that interval. This involves getting 4 values: the time at point 1, the time at point 2, the position at point 1, and the position at point 2. In other words:$$speed=v=\frac{x_{2}-x_{1}}{t_{2}-t{1}}=\frac{\Delta x}{\Delta t}$$This is fine for an interval, but what about the speed at just one moment in time? Say I want the exact speed of the car at t=2. This is impossible with our current method, since a 'moment' has a length of 0, and you can't divide by 0...<br><br>That's where our friend the limit comes in to play. Let's go back to that interval method. If we want to get the speed at t=2, we can calculate the speed in the interval 2 to 3, or the interval 2 to 2.5, etc.</p>
+    <table>
+      <tr>
+        <th>Point 1</th>
+        <th>Point 2</th>
+        <th>v</th>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2.5</td>
+        <td>4.5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2.25</td>
+        <td>4.25</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2.1</td>
+        <td>4.1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2.01</td>
+        <td>4.01</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2.001</td>
+        <td>4.001</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2.0001</td>
+        <td>4.0001</td>
+      </tr>
+    </table>
+    <p>Anyone with a functioning brain can tell that the closer we bring the second point in our interval to 2, the closer the speed gets to 4. This calls for a limit!$$\lim_{x \to a} \frac{f(x)-f(a)}{x-a}$$In this limit, our x approaches the value <b>a</b>. This value stands for the x position at which we want to know the speed. On top you have the difference of their function values, which in my example are positions, so this is the same as saying Δx. Meanwhile the bottom of the fraction in the limit is the difference of input values of the function. In our example these are times, so this is the same as Δt. This limit thus represents the instantaneous speed, or a derivative.</p>
+    <h3>Calculating derivatives</h3>
+    <p>You now know how to calculate derivatives using limits - I won't go into solving limits here. Sadly, it's a bit tedious to have to do it with limits all the time. Can't we learn some tricks to make things easier? Yes, we definitely can!<br><br>Let's start with x to the power of n, where n is a natural number (1,2,3,..).</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion" target="_blank">Wikipedia: Newton's Laws of Motion</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Momentum" target="_blank">Wikipedia: Momentum</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/220) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>

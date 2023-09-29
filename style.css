@@ -60,6 +60,8 @@ a:hover:not(.crs) {
 h1 {
     text-align: center;
     width:100vw;
+    font-size:2em;
+    text-wrap:balance;
 }
 
 body {
@@ -103,6 +105,7 @@ button.underConstruction {
 
 button:hover {
     box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+    transform:scale(1.025);
 }
 
 #buttonContainer {
@@ -189,6 +192,7 @@ table {
 
 iframe {
     margin-left:15px;
+    aspect-ratio: 500 / 281;
 }
 
 #contact {
@@ -200,8 +204,9 @@ iframe {
 }
 
 .contactEntry {
-    width:10%;
-    height:10vw;
+    width:8%;
+    min-width:40px;
+    aspect-ratio: 1 / 1;
     background-color:white;
     border:1px white groove;
     display:flex;
@@ -213,4 +218,10 @@ img.contactImg {
     width:100%;
     margin-left:0px;
     border:none;
+}
+
+#subject_special > a {
+    color:black;
+    text-shadow:1px 1px 1px gray;
+    letter-spacing: 1px;
 }

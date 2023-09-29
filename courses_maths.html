@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png?v=2">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <title>Maths Courses</title>
+</head>
+<body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1>🌍 Casper's Universe 🪐</h1>
+    <h5>by Casper</h5>
+    <h2><a href="course_maths/1.html">Derivative</a></h2>
+    <h3 id="wordCountTotal" class="total"></h3>
+    <script>
+fetch('times_maths.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    if (Array.isArray(jsonData)) {
+      const sum = jsonData.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      console.log(sum)
+      document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round((sum/60) * 100) / 100+" hours"
+    } else {
+      console.error('Invalid JSON format. Expected an array.');
+    }
+  })
+  .catch(err => console.error('Error fetching JSON:', err));
+
+    </script>
+</body>
+</html>
