@@ -244,3 +244,8 @@ h4 {
     margin-left:25px;
     text-decoration: underline;
 }
+
+.roadmap_entry {
+    text-align: center;
+    margin-left:0;
+}
