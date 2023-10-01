@@ -25,8 +25,9 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2><a class="crs previous" title="Previous course" href="11.html">&lt </a>Fluids<a class="crs next" title="Next course" href="13.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🔍 Self-researched</h3>
     <h3 id="courseBack"><a href="../courses_physics.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <h3>Fluids</h3>
     <p>We already covered most of the theory surrounding fluids, such as the Bernoulli Principle, gas laws, pressure, and mass flow. In this course we'll cover the remaining subjects!</p>
     <h3>Streamline</h3>
@@ -129,7 +130,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"

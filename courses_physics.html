@@ -24,6 +24,9 @@
     <h5>by Casper</h5>
     <h2 id="subject_special"><a href="formulas_physics.html">Formulas</a></h2>
     <h2 id="subject_special"><a href="units_physics.html">Units</a></h2>
+    <h3 id="credibility"><input type="checkbox" onclick="credibility()" id="credibility_check"> Show credibility info</h3>
+    <div id="credibility_legend_container"><h3 id="credibility_legend" style="display:none;">🔍 Self-researched / 🎓 School / 📢 Subjective</h3></div>
+    <div id="courses_normal">
     <h2><a href="course_physics/1.html">Newton's Laws of Motion</a></h2>
     <h2><a href="course_physics/2.html">3 Equations of Motion</a></h2>
     <h2><a href="course_physics/3.html">Newton's Law of Universal Gravitation</a></h2>
@@ -44,14 +47,47 @@
     <h2><a href="course_physics/18.html">Thermodynamics</a></h2>
     <h2><a href="course_physics/19.html">The Standard Model</a></h2>
     <h2><a href="course_physics/20.html">Radioactive Decay</a></h2>
+    </div>
+    <div id="courses_more" style="display:none;">
+      <h2><a href="course_physics/1.html">Newton's Laws of Motion 🎓</a></h2>
+      <h2><a href="course_physics/2.html">3 Equations of Motion 🎓</a></h2>
+      <h2><a href="course_physics/3.html">Newton's Law of Universal Gravitation 🎓</a></h2>
+      <h2><a href="course_physics/4.html">Work and Energy 🎓</a></h2>
+      <h2><a href="course_physics/5.html">Forms of Energy 🎓</a></h2>
+      <h2><a href="course_physics/6.html">Pressure 🎓</a></h2>
+      <h2><a href="course_physics/7.html">The Bernoulli Principle 🔍</a></h2>
+      <h2><a href="course_physics/8.html">Mass Flow 🔍</a></h2>
+      <h2><a href="course_physics/9.html">Gas Laws 🎓</a></h2>
+      <h2><a href="course_physics/10.html">Pressure in Solids 🔍</a></h2>
+      <h2><a href="course_physics/11.html">Heat Capacity 🎓</a></h2>
+      <h2><a href="course_physics/12.html">Fluids 🔍</a></h2>
+      <h2><a href="course_physics/13.html">Electrostatics 🎓</a></h2>
+      <h2><a href="course_physics/14.html">Electrodynamics 🎓</a></h2>
+      <h2><a href="course_physics/15.html">Magnetism 🎓</a></h2>
+      <h2><a href="course_physics/16.html">Electromagnetism 🎓</a></h2>
+      <h2><a href="course_physics/17.html">Celestial Mechanics 🔍</a></h2>
+      <h2><a href="course_physics/18.html">Thermodynamics 🔍</a></h2>
+      <h2><a href="course_physics/19.html">The Standard Model 🔍</a></h2>
+      <h2><a href="course_physics/20.html">Radioactive Decay 🎓</a></h2>
+    </div>
     <h3 id="wordCountTotal" class="total"></h3>
     <script>
+      function credibility() {
+        if (document.getElementById("credibility_check").checked) {
+          document.getElementById("courses_more").style.display = "unset"
+          document.getElementById("credibility_legend").style.display = "unset"
+          document.getElementById("courses_normal").style.display = "none"
+        } else {
+          document.getElementById("courses_more").style.display = "none"
+          document.getElementById("credibility_legend").style.display = "none"
+          document.getElementById("courses_normal").style.display = "unset"
+        }
+      }
 fetch('times_physics.json')
   .then(response => response.json())
   .then(jsonData => {
     if (Array.isArray(jsonData)) {
       const sum = jsonData.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-      console.log(sum)
       document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round((sum/60) * 100) / 100+" hours"
     } else {
       console.error('Invalid JSON format. Expected an array.');

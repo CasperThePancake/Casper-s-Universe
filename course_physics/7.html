@@ -25,8 +25,9 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2><a class="crs previous" title="Previous course" href="6.html">&lt </a>Bernoulli Principle<a class="crs next" title="Next course" href="8.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🔍 Self-researched</h3>
     <h3 id="courseBack"><a href="../courses_physics.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <h3>Conservation of Energy</h3>
     <p>The Bernoulli Principle is basically a law for the conservation of energy in fluids (moving through pipes). This will be our biggest derivation so far, so strap in and get ready to pay attention to words on your screen!</p>
     <h3>Derivation</h3>
@@ -58,7 +59,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"

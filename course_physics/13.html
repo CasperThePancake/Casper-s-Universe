@@ -25,8 +25,9 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2><a class="crs previous" title="Previous course" href="12.html">&lt </a>Electrostatics<a class="crs next" title="Next course" href="14.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🎓 Learned in school</h3>
     <h3 id="courseBack"><a href="../courses_physics.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <h3>Introduction</h3>
     <p>Time to get electric with a few courses about electricity! In this first course, we'll be looking at static electricity, which is electricity that doesn't move. Next up will be electrodynamics.</p>
     <h3>Electrometer</h3>
@@ -140,7 +141,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"

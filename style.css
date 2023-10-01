@@ -147,7 +147,7 @@ mjx-math {
     /* border:1px black groove; */
 }
 
-h3#formulaTitle, h3#wordCount, h3#courseBack {
+h3#formulaTitle, h3#wordCount, h3#courseBack, h3#courseCredibility {
     text-align: center;
     margin:0 !important;
 }
@@ -159,6 +159,11 @@ h3#wordCount {
 h3#courseBack {
     font-size:16px;
     margin-top:-20px !important;
+}
+
+h3#courseCredibility {
+    margin-top:-20px !important;
+    margin-bottom:20px !important;
 }
 
 h3#wordCountTotal {
@@ -208,7 +213,6 @@ iframe {
     min-width:40px;
     aspect-ratio: 1 / 1;
     background-color:white;
-    border:1px white groove;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -224,4 +228,19 @@ img.contactImg {
     color:black;
     text-shadow:1px 1px 1px gray;
     letter-spacing: 1px;
+}
+
+#credibility, #credibility_legend {
+    width:100%;
+    text-align: center;
+    margin-left:-0.01em;
+}
+
+#credibility_legend_container {
+    text-align:center;
+}
+
+h4 {
+    margin-left:25px;
+    text-decoration: underline;
 }

@@ -25,11 +25,12 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2>Derivative<a class="crs next" title="Next course" href="2.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🎓 Learned in school</h3>
     <h3 id="courseBack"><a href="../courses_maths.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <h3>Introduction</h3>
     <p>I hope you know what a function is. If you don't, you probably shouldn't be here yet. Here's an example of a simple one:</p>
-    <img src="assets/quadratic_function.png">
+    <iframe src="https://www.desmos.com/calculator/cdasoi8uab?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
     <p>Let's say this graph depicts the movement of a car. The x-axis is time, and the y-axis is the position of the car. You can obviously tell that the car moves forward while slowing down, eventually slowing down so much that it starts going backwards at a constantly faster pace. The question then becomes: just how fast is the car moving?<br><br>The approach you most likely already know is taking an interval and calculating the speed in that interval. This involves getting 4 values: the time at point 1, the time at point 2, the position at point 1, and the position at point 2. In other words:$$speed=v=\frac{x_{2}-x_{1}}{t_{2}-t{1}}=\frac{\Delta x}{\Delta t}$$This is fine for an interval, but what about the speed at just one moment in time? Say I want the exact speed of the car at t=2. This is impossible with our current method, since a 'moment' has a length of 0, and you can't divide by 0...<br><br>That's where our friend the limit comes in to play. Let's go back to that interval method. If we want to get the speed at t=2, we can calculate the speed in the interval 2 to 3, or the interval 2 to 2.5, etc.</p>
     <table>
       <tr>
@@ -73,13 +74,61 @@
         <td>4.0001</td>
       </tr>
     </table>
-    <p>Anyone with a functioning brain can tell that the closer we bring the second point in our interval to 2, the closer the speed gets to 4. This calls for a limit!$$\lim_{x \to a} \frac{f(x)-f(a)}{x-a}$$In this limit, our x approaches the value <b>a</b>. This value stands for the x position at which we want to know the speed. On top you have the difference of their function values, which in my example are positions, so this is the same as saying Δx. Meanwhile the bottom of the fraction in the limit is the difference of input values of the function. In our example these are times, so this is the same as Δt. This limit thus represents the instantaneous speed, or a derivative.</p>
+    <p>Anyone with a functioning brain can tell that the closer we bring the second point in our interval to 2, the closer the speed gets to 4. This calls for a limit!$$\lim_{x \to a} \frac{f(x)-f(a)}{x-a}$$In this limit, our x approaches the value <b>a</b>. This value stands for the x position at which we want to know the speed. On top you have the difference of their function values, which in my example are positions, so this is the same as saying Δx. Meanwhile the bottom of the fraction in the limit is the difference of input values of the function. In our example these are times, so this is the same as Δt. This limit thus represents the instantaneous speed, or a derivative.<br><br>A final thing to know is that the derivative is the slope of the tangent line. For any point on any graph, you can draw the tangent line like so:</p>
+    <iframe src="https://www.desmos.com/calculator/crug1intr7?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>Thus we can get the equation of that tangent line using the formula you learned years ago:$$y-y_{1}=s(x-x_{1})$$Where s is the slope, which we can replace with the derivative we find.</p>
     <h3>Calculating derivatives</h3>
-    <p>You now know how to calculate derivatives using limits - I won't go into solving limits here. Sadly, it's a bit tedious to have to do it with limits all the time. Can't we learn some tricks to make things easier? Yes, we definitely can!<br><br>Let's start with x to the power of n, where n is a natural number (1,2,3,..).</p>
+    <p>You now know how to calculate derivatives using limits - I won't go into solving limits here. Sadly, it's a bit tedious to have to do it with limits all the time. Can't we learn some tricks to make things easier? Yes, we definitely can!</p>
+    <h4>f(x)=c</h4>
+    <p>Let's say our function is f(x)=c with c being a constant (any number), so a function that does not rely on our input x.</p>
+    <iframe src="https://www.desmos.com/calculator/qndntataxc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>As I mentioned before, the derivative is the slope of the tangent line. The tangent line of a constant function is logically also a constant function, which has a slope of 0. The derivative of this type of equation is therefore 0.</p>
+    <h4>f(x)=x<sup>n</sup></h4>
+    <p>This is a more complicated type of equation. This equation covers stuff like x², x³, and so on. <b>n</b> is any natural number, except for 0. Let's do some proving! First, use the limit definition of a derivative:$$\frac{\Delta f}{\Delta x}=\frac{x^{n}-a^{n}}{x-a}$$Next, we'll be using Horner's theorem to divide equations. Not getting into the details, here is what that gives us:$$\frac{\Delta f}{\Delta x}=\frac{(x-a)(x^{n-1}+ax^{n-2}+a^{2}x^{n-3}+...+a^{n-1})}{x-a}$$$$\frac{\Delta f}{\Delta x}=x^{n-1}+ax^{n-2}+a^{2}x^{n-3}+...+a^{n-1}$$We defined the derivative as the lim(x>a) of this, so when x approaches a, this happens:$$\lim_{x \to a} \frac{\Delta f}{\Delta x}=x^{n-1}+x^{n-1}+x^{n-1}+...+x^{n-1}$$$$\lim_{x \to a} \frac{\Delta f}{\Delta x}=nx^{n-1}$$And that is our result for the derivative of x<sup>n</sup>!<br><br>For example: the derivative of x² becomes 2x, the derivative of x³ becomes 3x², and the derivative of x becomes 1.</p>
+    <h3>Derivatives of polynomial functions</h3>
+    <p>Polynomial functions are next. This means we'll be able to derive things like 3x²-6x+5.</p>
+    <h4>Sum rule</h4>
+    <p>The sum rule tells us what the derivative of the sum of two functions is. Let's call these functions f and g. We'll use the limit definition to prove this.$$\frac{\Delta (f+g)}{\Delta x}=\frac{(f+g)(x)-(f+g)(a)}{x-a}$$Logically, (f+g)(x) is the same as f(x)+g(x), so:$$\frac{\Delta (f+g)}{\Delta x}=\frac{f(x)+g(x)-f(a)-g(a)}{x-a}$$$$\frac{\Delta (f+g)}{\Delta x}=\frac{(f(x)-f(a))+(g(x)-g(a))}{x-a}$$$$\frac{\Delta (f+g)}{\Delta x}=\frac{f(x)-f(a)}{x-a}+\frac{g(x)-g(a)}{x-a}$$If we apply the limit for the derivative now, this becomes:$$\lim_{x \to a} \frac{\Delta (f+g)}{\Delta x}=f'(a)+g'(a)$$$$(f+g)'(x)=f'(x)+g'(x)$$This also works for a sum of 3 functions or more.</p>
+    <h4>Coefficient rule</h4>
+    <p>Let's prove some stuff to derive things like 3x².$$\frac{\Delta (rf)}{\Delta x}=\frac{(rf)(x)-(rf)(a)}{x-a}$$Once again, it's logical that (rf)(x) is the same as r*f(x), so:$$\frac{\Delta (rf)}{\Delta x}=\frac{rf(x)-rf(a)}{x-a}$$$$\frac{\Delta (rf)}{\Delta x}=r\frac{f(x)-f(a)}{x-a}$$Applying the limit gives us a result:$$(rf)'(x)=rf'(x)$$</p>
+    <h4>Examples</h4>
+    <p>Let's now derive something like 3x²-6x+5.$$f(x)=3x^{2}-6x+5$$$$f'(x)=6x-6$$</p>
+    <h3>Further derivations</h3>
+    <p>Additionally, we can derive the derivative. That's called the second derivative. You can also get the third, fourth, or sixty-eighth derivative, if you really want.$$f(x)=3x^{2}-6x+5$$$$f'(x)=6x-6$$$$f''(x)=6$$</p>
+    <h3>Meaning of derivative sign</h3>
+    <p>If the derivative at a point in the graph is positive, that means the graph is increasing. This can be explained through the derivative being the slope of the tangent line. If the slope of a linear function (line) is positive, it goes up. On the other hand, a negative derivative means the graph is decreasing. Finally, a derivative equal to zero means the graph is constant there. We can check this out by graphing both a function and its derivative at the same time.</p>
+    <iframe src="https://www.desmos.com/calculator/h1afbmbjsx?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>The red function increases from negative infinity to 0, which is easy to tell as the derivative (blue function) is positive in that same interval. After 0, the derivative becomes negative, and the function starts decreasing for the rest of eternity. At exactly 0, the derivative is 0, because the function is nor increasing nor decreasing. Finally, the speed at which the function increases is higher near negative infinity, because the derivative nears positive infinity there. The opposite goes for the function decreasing.</p>
+    <h3>Tangent functions</h3>
+    <p>If I show you this graph:</p>
+    <iframe src="https://www.desmos.com/calculator/ukiifvfpdi?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>It should be easy to tell that at the point (0,0), the two functions are touching eachother. They are tangent functions. Why is this related to derivatives? Well, a tangent point is a point where both the function values and the derivatives are equal.<br><br>The equations of these graphs are x²-5x and x³-4x²-5x. Deriving those gives us 2x-5 and 3x²-8x-5. If we input 0, we can see that both the function values are equal to 0. If we input 0 into the derivatives, we get 2*0-5 and 3*0-8*0-5, which is both equal to -5. The function values and derivatives are equal in (0,0), so we have proven these functions are tangental there.</p>
+    <h3>Function extrema</h3>
+    <p>An extrema is a point where the function reaches a top.</p>
+    <iframe src="https://www.desmos.com/calculator/cdasoi8uab?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>In the function above, that would be at x=0.<br><br>In this case it is obvious that this can be spotted by looking for a derivative equal to 0. But this won't always work. Let's look at x³ and its derivative:</p>
+    <iframe src="https://www.desmos.com/calculator/nzhhuzjyga?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>The derivative is clearly equal to 0 at x=0, but there is no extremum there on our red graph (x³). This is because of another requirement we must add.<br><br>If the derivative changes signs, there is an extremum.<br><br>This explains why there was an extremum for x², because as we saw earlier, the derivative went from positive to negative at x=0. In the case of x³, the derivative only touches the x-axis, it never becomes negative. Its sign does not change for x=0 and there is no extremum.</p>
+    <h3>Concave and convex functions</h3>
+    <p>If the first derivative tells us about the increase or decrease of the function, the second derivative tells us about the increase or decrease of the first derivative. In other words, the second derivative tells us something about the speed of the increase/decrease of the function. Let's take a look at an example:</p>
+    <iframe src="https://www.desmos.com/calculator/kic9keczpg?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>The first section we'll look at is everything before x=0. There, you can tell that the derivative - or the slope of the tangent line - is increasing. At some point, the derivative even changes signs from negative to positive - indicating an extremum. In this case, the function is convex. The first derivative is increasing, so the second derivative is positive.<br><br>The second section we'll look at is everything between 0 and 2. There, you can tell that the derivative is decreasing, until it becomes 0 at x=2. The function is concave. The first derivative is decreasing, so the second derivative is negative.<br><br>Finally, everything after x=2. Here, the derivative is once again increasing. The function is convex, the second derivative is positive.<br><br>Here's that same function with its first derivative:</p>
+    <iframe src="https://www.desmos.com/calculator/aiccrvfohd?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>As we said, the derivative (green) increases until x=0, decreases between 0 and 2, and increases again after that. There is also an extremum at x=-1, because the derivative changes sign from negative to positive.<br><br>Now with the second derivative:</p>
+    <iframe src="https://www.desmos.com/calculator/44dtvso0e4?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>The second derivative is indeed positive until x=0, negative between 0 and 2, and positive from 2 onward.<br><br>The points where the second derivative changes sign are called <b>inflection points</b>.</p>
+    <h3>More derivative rules</h3>
+    <h4>Derivative of function product</h4>
+    <p>Next up, let's learn another rule to make deriving easier - which is false, because exercises with this rule will become increasingly mind-numbing. We'll once again be using the limit definition here.$$(f·g)'(a)=\lim_{x \to a} \frac{(f·g)(x)-(f·g)(a)}{x-a}$$Logically, (f*g)(x) is the same as f(x)*g(x)...$$(f·g)'(a)=\lim_{x \to a} \frac{f(x)·g(x)-f(a)·g(a)}{x-a}$$Now we'll introduce some gibberish, which is allowed since that gibberish equals 0. You'll see why this is important soon.$$(f·g)'(a)=\lim_{x \to a} \frac{f(x)·g(x)\color{red}-f(a)·g(x)+f(a)·g(x)\color{black}-f(a)·g(a)}{x-a}$$Now we do some basic mathematical wizardry...$$(f·g)'(a)=\lim_{x \to a} \frac{(f(x)-f(a))·g(x)+f(a)·(g(x)-g(a))}{x-a}$$Let's split that up!$$(f·g)'(a)=\lim_{x \to a} \frac{f(x)-f(a)}{x-a}·\lim_{x \to a}g(x)+\lim_{x \to a}f(a)·\lim_{x \to a} \frac{g(x)-g(a)}{x-a}$$Now we can fix this mess with the limits and it becomes this final formula:$$(f·g)'(a)=f'(a)·g(a)+f(a)·g'(a)$$And that's how you take the derivative of a product of functions!<br><br>Additionally, you can conclude that (f*g*h)'=f'*g*h+f*g'*h+f*g*h' and so on for any amount of functions.</p>
+    <h4>Power rule</h4>
+    <p>This sounds like some political shit, but it's just a rule to derive a function to a certain power. This power, called <b>n</b>, is a natural number. Let's take a look..$$(f^{n})'=(f·f·f·...·f)'$$Where you have <b>n</b> factors of f in those parentheses. Next, we use the function product rule.$$(f^{n})'=f'·f·f·...·f+f·f'·f·...·f+f·f·f'·...·f+...+f·f·f·...·f'$$Here we have a bunch of the same 'blocks' of operations. Every operation contains 1*f' and also (n-1)*f. In total there will be <b>n</b> amount of these 'blocks'. That gives us this:$$(f^{n})'=n·f^{n-1}·f'$$</p>
+    <h4>Quotient rule</h4>
+    <p>We're almost done with these derivative rules. This one is for the quotient (division) of two functions.<br><br>We will prove this for two functions f and g. Let's call the quotient of those two h (f/g=h). This means that h*g=f. We can do this:$$f'(x)=h'(x)g(x)+h(x)g'(x)$$It uses the product rule. We want to solve for h'(x), so let's switch everything around to that.$$h'(x)=\frac{f'(x)-h(x)g'(x)}{g(x)}$$Now, let's replace h(x) with what we defined it as.$$h'(x)=\frac{f'(x)-\frac{f(x)}{g(x)}g'(x)}{g(x)}$$Then we multiply both the numerator and denominator by g(x).$$h'(x)=\frac{f'(x)g(x)-f(x)g'(x)}{g^{2}(x)}$$$$(\frac{f(x)}{g(x)})'=\frac{f'(x)g(x)-f(x)g'(x)}{g^{2}(x)}$$And another formula has been discovered!</p>
+    <h4>Rational power rule</h4>
+    <p>We already proved that (f<sup>n</sup>)'=n*f<sup>n-1</sup>*f', but that was only for natural numbers. Let's use our new knowledge to prove the same thing for rational numbers. We'll call this rational exponent <b>q</b>. Since it is a rational number, it can be written as a fraction, which we'll denote as <b>m/n</b>. Move stuff over and we get m=q*n. Let's go!$$f^{q·n}=f^{m}$$$$(f^{q})^{n}=f^{m}$$Let's derive both sides now.$$n·(f^{q})^{n-1}·(f^{q})'=m·f^{m-1}·f'$$We need (f<sub>q</sub>)', so let's move everything else away.$$(f^{q})'=\frac{m·f^{m-1}·f'}{n·(f^{q})^{n-1}}$$Now we do some mathing.$$(f^{q})'=\frac{m}{n}·f^{m-1-qn+q}·f'$$Then we replace that first q in the exponent with what we defined it as.$$(f^{q})'=\frac{m}{n}·f^{m-1-m+q}·f'$$$$(f^{q})'=\frac{m}{n}·f^{q-1}·f'$$And finally, we get this:$$(f^{q})'=q·f^{q-1}·f'$$Isn't it beautiful that we've proven the same thing again, but more complex? In the future, we'll even cover a 'real power rule' with exponents like pi...<br><br>This rule also allows us to derive square roots, since the square root is an exponent of 1/2.</p>
       <hr class="solid">
       <h2>Sources</h2>
-      <p><a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion" target="_blank">Wikipedia: Newton's Laws of Motion</a></p>
-      <p><a href="https://en.wikipedia.org/wiki/Momentum" target="_blank">Wikipedia: Momentum</a></p>
+      <p><a href="https://www.bol.com/be/nl/p/delta-nova-5/9200000048246918/" target="_blank">Delta Nova (Textbook)</a></p>
       <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
     <!-- Scroll bar code -->
     <script>
@@ -97,7 +146,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"

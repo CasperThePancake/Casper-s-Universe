@@ -25,8 +25,9 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2>The 3 laws of motion<a class="crs next" title="Next course" href="2.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🎓 Learned in school</h3>
     <h3 id="courseBack"><a href="../courses_physics.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <p>Let's get started with Newton's laws of motion. There are 3 laws of motion with different formulas and definitions attached to them.</p>
     <h3>Force</h3>
     <p>The first unit we will need for Newton's laws of motion, but also for most subjects within physics, is the unit of force. This unit has the symbol N, which stands for Newton. Scientists love naming units after themselves.</p>
@@ -128,7 +129,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"

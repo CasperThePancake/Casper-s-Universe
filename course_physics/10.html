@@ -25,8 +25,9 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2><a class="crs previous" title="Previous course" href="9.html">&lt </a>Pressure in Solids<a class="crs next" title="Next course" href="11.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🔍 Self-researched</h3>
     <h3 id="courseBack"><a href="../courses_physics.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <h3><u>Stress</u></h3>
     <p>Believe it or not, solid objects can also feel pressure. We call this 'stress', it is calculated in the same way as pressure.$$σ=\frac{F}{A}$$</p>
     <table>
@@ -160,7 +161,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"

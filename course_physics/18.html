@@ -25,8 +25,9 @@
     <h1>🌍 Casper's Universe 🪐</h1>
     <h5>by Casper</h5>
     <h2><a class="crs previous" title="Previous course" href="17.html">&lt </a>Thermodynamics<a class="crs next" title="Next course" href="19.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🔍 Self-researched</h3>
     <h3 id="courseBack"><a href="../courses_physics.html">Back to courses</a></h3>
-    <h3 id="wordCount">COUNT</h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
     <h3>Laws of Thermodynamics</h3>
     <p>Let's begin this new course with the 4 laws of thermodynamics.<br><br>The zeroth law of thermodynamics says that if two systems are in thermal equilibrium with a third system, they are also in thermal equilibrium with eachother. This is quite logical. It allows us to define what temperature here is and also heat flow between systems.<br><br>The first law of thermodynamics defines internal energy. This new type of energy has nothing to do with kinetic or potential energy in a thermodynamic context, but in a more general context it can encompass those as well. The internal energy of a system changes each time it does work or transfers heat. This can be written in the following equation:$$\Delta U=Q-W$$The second law of thermodynamics introduces us to entropy. Entropy is a measure for the disorder or randomness in a system. Entropy tends to increase as time goes by.<br><br>The third and final law of thermodynamics states that, when a system reaches absolute zero (0K or -273°C), the entropy nears its minimum. Because of this, it is thought to be impossible for a system to reach absolute zero.</p>
     <h3>Types of Systems</h3>
@@ -75,7 +76,7 @@
           for (var i = 0; i < words.length; i++) {
             count += words[i].textContent.split(" ").length
           }
-          return Math.round((count/220) * 10) / 10
+          return Math.round((count/200) * 10) / 10
         }
 
         document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
