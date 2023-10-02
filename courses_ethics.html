@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png?v=2">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <title>Ethics Courses</title>
+</head>
+<body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="roadmap.html">Roadmap</a>
+    </nav>
+    <h1>🌍 Casper's Universe 🪐</h1>
+    <h5>by Casper</h5>
+    <h3 id="credibility"><input type="checkbox" onclick="credibility()" id="credibility_check"> Show credibility info</h3>
+    <div id="credibility_legend_container"><h3 id="credibility_legend" style="display:none;">🔍 Self-researched / 🎓 School / 📢 Subjective</h3></div>
+    <div id="courses_normal">
+    <h2><a href="course_ethics/1.html">Maximizing happiness: the trolley problem</a></h2>
+    </div>
+    <div id="courses_more" style="display:none;">
+      <h2><a href="course_ethics/1.html">Maximizing happiness: the trolley problem 📢🎓</a></h2>
+    </div>
+    <h3 id="wordCountTotal" class="total"></h3>
+    <script>
+      function credibility() {
+        if (document.getElementById("credibility_check").checked) {
+          document.getElementById("courses_more").style.display = "unset"
+          document.getElementById("credibility_legend").style.display = "unset"
+          document.getElementById("courses_normal").style.display = "none"
+        } else {
+          document.getElementById("courses_more").style.display = "none"
+          document.getElementById("credibility_legend").style.display = "none"
+          document.getElementById("courses_normal").style.display = "unset"
+        }
+      }
+fetch('times_ethics.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    if (Array.isArray(jsonData)) {
+      const sum = jsonData.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      document.getElementById("wordCountTotal").innerHTML = "🕒Total reading time: "+Math.round((sum/60) * 100) / 100+" hours"
+    } else {
+      console.error('Invalid JSON format. Expected an array.');
+    }
+  })
+  .catch(err => console.error('Error fetching JSON:', err));
+
+    </script>
+</body>
+</html>
