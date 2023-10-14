@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../course_physics/assets/favicon_green.png">
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:wght@500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Exponentials & Logarithms</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../subjects.html">Subjects</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../roadmap.html">Roadmap</a>
+    </nav>
+    <h1>🌍 Casper's Universe 🪐</h1>
+    <h5>by Casper</h5>
+    <h2><a class="crs previous" title="Previous course" href="2.html">&lt Exponentials & Logarithms<a class="crs next" title="Next course" href="4.html"> &gt</a></h2>
+    <h3 id="courseCredibility">🎓 Learned in school</h3>
+    <h3 id="courseBack"><a href="../courses_maths.html">Back to courses</a></h3>
+    <h3 id="wordCount" title="Estimated time to read">COUNT</h3>
+    <h3>Exponential Functions</h3>
+    <p>You've probably heard of exponential growth before. It's growth that keeps becoming faster, because the speed of the growth depends on the input value. An example function would be y=2<sup>x</sup>.</p>
+    <iframe src="https://www.desmos.com/calculator/jzeecjtxfo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>In general, we'll say the equation of an exponential function is f(x)=a<sup>x</sup>. We'll also have to account for some stuff here. Our value for a cannot be negative, since we can't always calculate a negative number to any power. For example, a negative number to the power of 1/2 is the square root of a negative number, which doesn't exist. This means that a must be positive. It also can't be equal to 1. That's not because that wouldn't exist, but that would just result in a constant function (y=1). Additionally, we can add b into the mix and say the equation is f(x)=b*a<sup>x</sup>.</p>
+    <h4>Properties</h4>
+    <p>If a is larger than 1, we get a function like this:</p>
+    <iframe src="https://www.desmos.com/calculator/jzeecjtxfo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>If a is somewhere between 0 and 1, we get a function like this:</p>
+    <iframe src="https://www.desmos.com/calculator/tyu2xi8k5f?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>In general, the domain of this function is every real number.<br>The range is every strictly positive real number (so larger than 0). This is because any positive number to a certain power will result in a positive number.<br>This function has no zeros.<br>It has one intersection with the y-axis, namely (0,1). If you add a b in front of the equation, this point will always be (0,b).<br>The x-axis acts as a horizontal asymptote; the farther to + or - infinity we go, the closer the function value gets to it, but it never quite reaches it completely.<br>If a>1, f is increasing for the entire domain. If 0&lta&lt1, f is decreasing for the entire domain.</p>
+    <h3>Logarithms</h3>
+    <h4>Definition</h4>
+    <p>Look at this:$$\log_{2}(8)$$The meaning of this new thing is as follows: "To what power must we raise 2 in order to get 8?" This logarithm would thus equal 3. Below are a few more examples to get you acquainted with this new maths tool:$$\log_{16}(4)=1/2$$ $$\log_{7}(7)=1$$ $$\log_{69}(1)=0$$ $$\log_{1}(5)=???$$ $$\log_{-4}(16)=???$$Those last two are not possible. You might think the answer to the last one is 2, but we cannot use negative numbers inside of our logarithm. The same goes for 1, since you can't get anything else than 1 if you raise it to any power.</p>
+    <h4>a^(log(a)(x))=x</h4>
+    <p>This is a special little trick:$$a^{\log_{a}(b)}=b$$Since we don't know the answer to the logarithm in the exponent, we'll call it y. This means that log(a)(b)=y, or a^y=b. If we replace the logarithm by what we defined it as (y), we get a^y, which we just said is equal to b. So the entire thing equals b. Cool, right?</p>
+    <h3>Logarithm calculations</h3>
+    <p>Let's prove some new rules related to logarithms.</p>
+    <h4>Sum of logarithms</h4>
+    <p>We will prove the following first:$$\log_{a}(x_{1})+\log_{a}(x_{2})=\log_{a}(x_{1}x_{2})$$To start, let's define the following:$$\log_{a}(x_{1})=y_{1}$$ $$\log_{a}(x_{2})=y_{2}$$This also means the following:$$x_{1}=a^{y_{1}}$$ $$x_{2}=a^{y_{2}}$$We can start proving shit!$$x_{1}⋅x_{2}=a^{y_{1}}⋅a^{y_{2}}$$ $$x_{1}⋅x_{2}=a^{y_{1}+y_{2}}$$ $$\log_{a}(x_{1}⋅x_{2})=y_{1}+y_{2}$$Replace y by what we defined...$$\log_{a}(x_{1}⋅x_{2})=\log_{a}(x_{1})+\log_{a}(x_{2})$$And we got a rule!</p>
+    <h4>Difference of logarithms</h4>
+    <p>Next up we will prove the following:$$\log_{a}(\frac{x_{1}}{x_{2}})=\log_{a}(x_{1})-\log_{a}(x_{2})$$The proof for this is completely analogue to the previous one, with the only difference being that the division causes that exponent to be y1-y2 instead of y1+y2.</p>
+    <h4>Exponent rule</h4>
+    <p>Let's now prove this cool thing:$$\log_{a}(x^{r})=r⋅\log_{a}(x)$$Let's say this:$$y=\log_{a}(x)$$That means...$$x=a^{y}$$ $$x^{r}=(a^{y})^{r}$$ $$x^{r}=a^{yr}$$ $$\log_{a}(x^{r})=yr$$ $$\log_{a}(x^{r})=r⋅\log_{a}(x)$$Very simple and cool.</p>
+    <h4>Changing the base of a logarithm</h4>
+    <p>The base of a logarithm is the first number, so in log<sub>2</sub>(4), the number 2 is the base of the logarithm. We'll now prove this:$$\log_{a}(x)=\frac{\log_{b}(x)}{\log_{b}(a)}$$We once again begin with this:$$y=\log_{a}(x)$$Which once again means...$$x=a^{y}$$ $$\log_{b}(a^{y})=\log_{b}(x)$$Use the exponent rule...$$y\log_{b}(a)=\log_{b}(x)$$ $$y=\frac{\log_{b}(x)}{\log_{b}(a)}$$ $$\log_{a}(x)=\frac{\log_{b}(x)}{\log_{b}(a)}$$</p>
+    <h3>Logarithmic functions</h3>
+    <p>Finally let us analyze the graph of a logarithmic function. The logarithmic function is the inverse function of the exponential function, which means that if we mirror the exponential function over y=x, we get a logarithmic function.</p>
+    <iframe src="https://www.desmos.com/calculator/ojjv6yeq9h?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>The red graph is y=2<sup>x</sup>.<br>The blue graph is y=x.<br>The green graph is y=log<sub>2</sub>(x).</p>
+    <h4>Properties</h4>
+    <iframe src="https://www.desmos.com/calculator/9lnelu07yk?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>Since this function is the inverse of the exponential function, its domain and range are swapped. The range is every real number, while the domain is only strictly positive numbers.<br>While the exponential function had no zeros and one intersection with the y-axis, the logarithmic function has one zero (1,0) and no intersections with the y-axis.<br>The exponential function had a horizontal asymptote of y=0 (x-axis), while the logarithmic function has a vertical asymptote of x=0 (y-axis).<br><br>Additionally, the value of a in log<sub>a</sub>(x) says something about the global increase or decrease. In the graph above, a>1, which causes the graph to increase. In the graph below, 0&lta&lt1, which causes the graph to decrease.</p>
+    <iframe src="https://www.desmos.com/calculator/z3rqxq3pnq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p>In the next course, we'll be deriving exponential functions, logarithmic functions and trigonometric functions...</p>
+      <hr class="solid">
+      <h2>Sources</h2>
+      <p><a href="https://www.bol.com/be/nl/p/delta-nova-5/9200000048246918/" target="_blank">Delta Nova (Textbook)</a></p>
+      <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a></p>
+    <!-- Scroll bar code -->
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/200) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
+</body>
+</html>
