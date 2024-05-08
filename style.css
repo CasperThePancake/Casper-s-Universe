@@ -249,3 +249,21 @@ h4 {
     text-align: center;
     margin-left:0;
 }
+
+form {
+    text-align: center;
+}
+
+select {
+    border:none;
+    background:none;
+    font-size:medium;
+    margin-left:-3px;
+}
+
+#postDate {
+    text-align: center;
+    margin-top:-10px;
+    color:rgb(39, 39, 39);
+    margin-left:0;
+}
