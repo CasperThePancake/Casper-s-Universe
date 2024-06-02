@@ -26,6 +26,7 @@
     <h5>by Casper</h5>
     <h2>Far-right in Belgium</h2>
     <h3 id="postDate">May 8th, 2024</h3>
+    <h3 id="wordCount" class="postLength" title="Estimated time to read">COUNT</h3>
     <p>No country is a stranger to far-right parties. Belgium is no exception! As someone who has lived there for their whole life, it's safe to say I've come to learn how our far-right party thinks and operates. I'll soon be turning 18, just falling short of eligibility for the general Belgian and Flemish elections, but I can vote for the EU parliament - and I will.</p>
     <h3>Flemish Interest</h3>
     <p>The far-right party in Flanders is called Flemish Interest (in Dutch: Vlaams Belang). Everyone here knows it by name, they have quite the status here in Flanders. Flemish Interest depicts itself as the outlier, a party that's never been voted into a government, partially because they didn't get quite enough votes and partially because no other party wanted to work together with them. In Belgium, there is an unspoken law called 'cordon sanitaire' stating no party will ever join a coalition with them. Whether that rule will be followed, will become clear after the 2024 elections...<br><br>The ideology that Flemish Interest follows is hard conservatism and separatism. This means they want to stick true to old, set-in-stone values in the Flemish history and also possibly make Flanders a sovereign nation. The latter is an extremely unlikely scenario, but it is what they're going for.</p>
@@ -37,5 +38,25 @@
     <p>It sucks.<br><br>The justice system here has been lacking for years. Not only are punishments too mild, they also cancel punishments because it is believed that 'the criminal has bettered their life' and that 'they deserve a second chance'. Don't get me wrong, I'll be the first guy to argue people deserve second chances, but there must be case exceptions to protect society from dangerous people. If we sentence a murderer to life in prison, who in their right mind would think to release them? You might think you're being nice and forgiving, but you're taking massive risks. I'm sure that some prisoners have made up their mind and will not commit a crime again, but most will and it is simply not worth it to take the risk. Our justice system does take those risks and it costs them safety. It is lacking; criminals don't get caught, sentences are too mild, sentences are cut short and dangerous criminals are freed early.<br><br>We must keep in mind that the point of a criminal sentence is not only to tell the criminal they did something wrong, but also to show society what they shouldn't do. It's a way to warn others not to do the same. But if I'm noticing the justice system sucks, anyone can notice it. So can criminals, and they abuse the system, still committing hideous crimes, because they know they'll be free again in months.<br><br>If a better and more strict justice system is introduced, crime rates will drop, no questions asked. People will finally realize that doing shit wrong actually has an impact on your life. It takes away freedom, a thing most of us care about very much. It will also show newcomers what they shouldn't do.</p>
     <h3>Better approach</h3>
     <p>I'm not here to say 'open the borders, guys, let 'em all in!', because that wouldn't be wise. People who enter a new country should still be screened, but not in weird ways like Flemish Interest is suggesting. The goal of every step and check in life should be to guarantee a person is putting in the effort. Since effort cannot be measured in a number, society has turned to methods they believe somewhat represent the amount of effort someone puts in. Things like scores at school, the amount of money in your bank account, how you look, etc. They're decent attempts at the representation of effort, but they're also severely lacking. We must remember that just because someone has a bad test score, doesn't mean they aren't putting in the effort. If someone is poor, it doesn't mean they're not trying. It is impossible to measure effort, but we can try, sadly right now we're searching it in the wrong place. And no, a totalitarian social score like proposed in China also doesn't work. Sometimes people who put in effort with no results just don't know what to do otherwise. It is up to all of us to teach each other how to get results from effort. And it is up to a government and justice system to properly guarantee everyone is putting in an effort.<br><br>Oh, and eliminating those who don't meet your standards is also the wrong approach. I'll put it like this: say you and someone else were climbing a mountain. The other person falls, because they did something wrong. Would you rather keep climbing for your own wellbeing or save them, possibly creating double as much happiness in the world?<br><br>Those who chose the first option, you know what party to vote for, and it ain't a pretty one.</p>
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/200) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
 </body>
 </html>

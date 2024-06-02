@@ -26,6 +26,7 @@
     <h5>by Casper</h5>
     <h2>Beliefs</h2>
     <h3 id="postDate">June 1st, 2024</h3>
+    <h3 id="wordCount" class="postLength" title="Estimated time to read">COUNT</h3>
     <p>Everyone has their own beliefs. Like many things in life, beliefs are subjective things. They're much like opinions, because what you believe in is always different from someone else. Even if two people believe the earth orbits the sun, they may disagree on certain nuances - or they may disagree on completely different beliefs.</p>
     <h3>Religion</h3>
     <p>Religion is a type of belief. If someone believes, it doesn't immediately mean they are religious. But if someone is religious, it does mean they believe. More specifically, they believe in whatever that religion entails. If you're a religious Christian - you could be a Christian who isn't religious - you believe in God. It is of course wrong of me to generalize the Christian belief into 'believing in God', as it is much more than that and there are different tiers, but that's the basis. Besides this example there of course exist hundreds or even thousands of other religions. </p>
@@ -37,5 +38,25 @@
     <p>Perhaps that is exactly why beliefs are so interesting and why we should never discredit anyone for believing what they believe. If someone believes in god, maybe it is simply because there are too many questions science can't answer, and religion can. Whether it's right or not - everyone has their opinions, if it's a way for them to understand reality better and live in it more comfortably, why should we care? If they're happy and they live a good life, where's our permission to tell them what to believe in?<br><br>And that's exactly what divides good belief from bad belief. Because there is such a thing as a bad belief. If your belief leads you to do bad things, it's not a particularly good belief. You could once again argue that the definition of a bad thing is subjective. But you could also keep pushing that argument and eventually shit on everyone, arguing you can do whatever you want because everything is technically correct. And that's obviously not the way to go, so some things just aren't okay.<br><br>Beliefs are what we make of them, but their end goal should always be to help us understand the world around us. Whether that means understanding how the universe was created, how many apples you should buy at the grocery store or if you should help the old lady cross the road, it comes down to one simple rule.</p>
     <h3>Conclusion</h3>
     <p>It is not the belief that matters, but whether it makes you live a good life. It doesn't matter if someone believes that rocks hold magical powers or that cows fart rainbows, as long as they're good people we should all just be happy.</p>
+    <script>
+        window.onscroll = function() {scrollBar()};
+
+        function scrollBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+
+        function wordCount(words) {
+          var count = 0
+          for (var i = 0; i < words.length; i++) {
+            count += words[i].textContent.split(" ").length
+          }
+          return Math.round((count/200) * 10) / 10
+        }
+
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+    </script>
 </body>
 </html>

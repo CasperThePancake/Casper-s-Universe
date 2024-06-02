@@ -147,7 +147,14 @@ mjx-math {
     /* border:1px black groove; */
 }
 
-h3#formulaTitle, h3#wordCount, h3#courseBack, h3#courseCredibility {
+.postLength {
+    margin-left:0;
+    margin-right:0;
+    margin-top:-15px !important;
+    text-align: center;
+}
+
+h3#formulaTitle, h3#wordCount:not(.postLength), h3#courseBack, h3#courseCredibility {
     text-align: center;
     margin:0 !important;
 }
