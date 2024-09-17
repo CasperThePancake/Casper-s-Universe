@@ -56,7 +56,7 @@
           return Math.round((count/200) * 10) / 10
         }
 
-        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p"))+" minute(s)"
+        document.getElementById("wordCount").innerHTML = "🕒"+wordCount(document.querySelectorAll("p, li, h3, q"))+" minute(s)"
     </script>
 </body>
 </html>
