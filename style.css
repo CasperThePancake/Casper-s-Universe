@@ -76,9 +76,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-p, q {
+p, q, li {
     max-width:1200px;
     margin-left:25px;
+    margin-right:25px;
+    text-align:justify;
 }
 
 h5 {
@@ -89,6 +91,10 @@ h5 {
 
 q {
     color:#686868
+}
+
+blockquote {
+    color: #686868
 }
 
 button {
@@ -192,6 +198,8 @@ h3#wordCountTotal {
 
 table {
     margin-top:5px;
+    margin-left:10px;
+    margin-right:10px;
 }
 
 .crs {
